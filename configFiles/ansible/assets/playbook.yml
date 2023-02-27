@@ -1,0 +1,51 @@
+- hosts: k8sMaster
+#  vars:
+#    depl: "unspecified"
+#    depl_namespace: "unspecified"
+#    imageTag: "unspecified"
+#    dockerUsr: "unspecified"
+#    dockerPass: "unspecified"
+  tasks:
+  - name: "Docker login"
+    docker_login:
+      username: "{{dockerUsr}}"
+      password: "{{dockerPass}}"
+    connection: local
+  - name: "Build tagged Docker image"
+    docker_image:
+      build:
+        path: ~/imageBuild
+      name: "vital987/tomcat_helloworld:{{imageTag}}"
+      repository: "vital987/tomcat_helloworld:{{imageTag}}"
+      push: yes
+      pull: yes
+      source: build
+    connection: local
+  - name: Tag & Push latest Docker image
+    docker_image:
+      name: "vital987/tomcat_helloworld:{{imageTag}}"
+      repository: "vital987/tomcat_helloworld:latest"
+      force_tag: yes
+      push: yes
+      source: local
+    connection: local
+  - name: "Check k8s deployment"
+    ansible.builtin.command: "kubectl describe deployment {{depl}} --namespace {{depl_namespace}}"
+    register: depl_chk
+    ignore_errors: true
+  - name: "Message"
+    ansible.builtin.debug:
+      msg: "K8s deployment {{depl}} unavailable, creating a new one."
+    when: depl_chk is failed
+  - name: "Message"
+    ansible.builtin.debug:
+      msg: "K8s deployment {{depl}} found, updating images to specified ones."
+    when: depl_chk is succeeded
+  - name: "Create a Deployment"
+    kubernetes.core.k8s:
+      state: present
+      template: deployment.yml
+    when: depl_chk is failed
+  - name: "Update existing deployment"
+    ansible.builtin.command: "kubectl set image deployment {{depl}} {{depl}}=vital987/tomcat_helloworld:{{imageTag}} --namespace {{depl_namespace}}"
+    when: depl_chk is succeeded

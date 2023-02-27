@@ -1,0 +1,115 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] azurerm_kubernetes_cluster.cluster_k8sWorker (expand)" [label = "azurerm_kubernetes_cluster.cluster_k8sWorker", shape = "box"]
+		"[root] azurerm_linux_virtual_machine.vm_ansible (expand)" [label = "azurerm_linux_virtual_machine.vm_ansible", shape = "box"]
+		"[root] azurerm_linux_virtual_machine.vm_jenkins (expand)" [label = "azurerm_linux_virtual_machine.vm_jenkins", shape = "box"]
+		"[root] azurerm_linux_virtual_machine.vm_k8sMaster (expand)" [label = "azurerm_linux_virtual_machine.vm_k8sMaster", shape = "box"]
+		"[root] azurerm_network_interface.nic_ansible (expand)" [label = "azurerm_network_interface.nic_ansible", shape = "box"]
+		"[root] azurerm_network_interface.nic_jenkins (expand)" [label = "azurerm_network_interface.nic_jenkins", shape = "box"]
+		"[root] azurerm_network_interface.nic_k8sMaster (expand)" [label = "azurerm_network_interface.nic_k8sMaster", shape = "box"]
+		"[root] azurerm_network_interface_security_group_association.anisga_ansible (expand)" [label = "azurerm_network_interface_security_group_association.anisga_ansible", shape = "box"]
+		"[root] azurerm_network_interface_security_group_association.anisga_jenkins (expand)" [label = "azurerm_network_interface_security_group_association.anisga_jenkins", shape = "box"]
+		"[root] azurerm_network_interface_security_group_association.anisga_k8sMaster (expand)" [label = "azurerm_network_interface_security_group_association.anisga_k8sMaster", shape = "box"]
+		"[root] azurerm_network_security_group.nsg_ansible (expand)" [label = "azurerm_network_security_group.nsg_ansible", shape = "box"]
+		"[root] azurerm_network_security_group.nsg_jenkins (expand)" [label = "azurerm_network_security_group.nsg_jenkins", shape = "box"]
+		"[root] azurerm_network_security_group.nsg_k8sMaster (expand)" [label = "azurerm_network_security_group.nsg_k8sMaster", shape = "box"]
+		"[root] azurerm_public_ip.ip_ansible (expand)" [label = "azurerm_public_ip.ip_ansible", shape = "box"]
+		"[root] azurerm_public_ip.ip_ingress (expand)" [label = "azurerm_public_ip.ip_ingress", shape = "box"]
+		"[root] azurerm_public_ip.ip_jenkins (expand)" [label = "azurerm_public_ip.ip_jenkins", shape = "box"]
+		"[root] azurerm_public_ip.ip_k8sMaster (expand)" [label = "azurerm_public_ip.ip_k8sMaster", shape = "box"]
+		"[root] azurerm_resource_group.rg1 (expand)" [label = "azurerm_resource_group.rg1", shape = "box"]
+		"[root] azurerm_role_assignment.accessClusterCreds (expand)" [label = "azurerm_role_assignment.accessClusterCreds", shape = "box"]
+		"[root] azurerm_role_assignment.clusterAdmin (expand)" [label = "azurerm_role_assignment.clusterAdmin", shape = "box"]
+		"[root] azurerm_subnet.s0 (expand)" [label = "azurerm_subnet.s0", shape = "box"]
+		"[root] azurerm_user_assigned_identity.k8sClusterAccess (expand)" [label = "azurerm_user_assigned_identity.k8sClusterAccess", shape = "box"]
+		"[root] azurerm_virtual_network.vnet1 (expand)" [label = "azurerm_virtual_network.vnet1", shape = "box"]
+		"[root] local_file.local_key_ansible (expand)" [label = "local_file.local_key_ansible", shape = "box"]
+		"[root] local_file.local_key_jenkins (expand)" [label = "local_file.local_key_jenkins", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/azurerm\"]" [label = "provider[\"registry.terraform.io/hashicorp/azurerm\"]", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/local\"]" [label = "provider[\"registry.terraform.io/hashicorp/local\"]", shape = "diamond"]
+		"[root] provider[\"registry.terraform.io/hashicorp/tls\"]" [label = "provider[\"registry.terraform.io/hashicorp/tls\"]", shape = "diamond"]
+		"[root] tls_private_key.key_ansible (expand)" [label = "tls_private_key.key_ansible", shape = "box"]
+		"[root] tls_private_key.key_jenkins (expand)" [label = "tls_private_key.key_jenkins", shape = "box"]
+		"[root] tls_private_key.key_k8sMaster (expand)" [label = "tls_private_key.key_k8sMaster", shape = "box"]
+		"[root] var.location" [label = "var.location", shape = "note"]
+		"[root] var.rgname" [label = "var.rgname", shape = "note"]
+		"[root] var.user" [label = "var.user", shape = "note"]
+		"[root] azurerm_kubernetes_cluster.cluster_k8sWorker (expand)" -> "[root] azurerm_resource_group.rg1 (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_ansible (expand)" -> "[root] azurerm_linux_virtual_machine.vm_k8sMaster (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_ansible (expand)" -> "[root] azurerm_network_interface.nic_ansible (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_jenkins (expand)" -> "[root] azurerm_network_interface.nic_jenkins (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_jenkins (expand)" -> "[root] tls_private_key.key_ansible (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_jenkins (expand)" -> "[root] tls_private_key.key_jenkins (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_jenkins (expand)" -> "[root] var.user"
+		"[root] azurerm_linux_virtual_machine.vm_k8sMaster (expand)" -> "[root] azurerm_network_interface.nic_k8sMaster (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_k8sMaster (expand)" -> "[root] azurerm_public_ip.ip_ingress (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_k8sMaster (expand)" -> "[root] azurerm_user_assigned_identity.k8sClusterAccess (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_k8sMaster (expand)" -> "[root] tls_private_key.key_ansible (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_k8sMaster (expand)" -> "[root] tls_private_key.key_k8sMaster (expand)"
+		"[root] azurerm_linux_virtual_machine.vm_k8sMaster (expand)" -> "[root] var.user"
+		"[root] azurerm_network_interface.nic_ansible (expand)" -> "[root] azurerm_public_ip.ip_ansible (expand)"
+		"[root] azurerm_network_interface.nic_ansible (expand)" -> "[root] azurerm_subnet.s0 (expand)"
+		"[root] azurerm_network_interface.nic_jenkins (expand)" -> "[root] azurerm_public_ip.ip_jenkins (expand)"
+		"[root] azurerm_network_interface.nic_jenkins (expand)" -> "[root] azurerm_subnet.s0 (expand)"
+		"[root] azurerm_network_interface.nic_k8sMaster (expand)" -> "[root] azurerm_public_ip.ip_k8sMaster (expand)"
+		"[root] azurerm_network_interface.nic_k8sMaster (expand)" -> "[root] azurerm_subnet.s0 (expand)"
+		"[root] azurerm_network_interface_security_group_association.anisga_ansible (expand)" -> "[root] azurerm_network_interface.nic_ansible (expand)"
+		"[root] azurerm_network_interface_security_group_association.anisga_ansible (expand)" -> "[root] azurerm_network_security_group.nsg_ansible (expand)"
+		"[root] azurerm_network_interface_security_group_association.anisga_jenkins (expand)" -> "[root] azurerm_network_interface.nic_jenkins (expand)"
+		"[root] azurerm_network_interface_security_group_association.anisga_jenkins (expand)" -> "[root] azurerm_network_security_group.nsg_jenkins (expand)"
+		"[root] azurerm_network_interface_security_group_association.anisga_k8sMaster (expand)" -> "[root] azurerm_network_interface.nic_k8sMaster (expand)"
+		"[root] azurerm_network_interface_security_group_association.anisga_k8sMaster (expand)" -> "[root] azurerm_network_security_group.nsg_k8sMaster (expand)"
+		"[root] azurerm_network_security_group.nsg_ansible (expand)" -> "[root] azurerm_resource_group.rg1 (expand)"
+		"[root] azurerm_network_security_group.nsg_jenkins (expand)" -> "[root] azurerm_resource_group.rg1 (expand)"
+		"[root] azurerm_network_security_group.nsg_k8sMaster (expand)" -> "[root] azurerm_resource_group.rg1 (expand)"
+		"[root] azurerm_public_ip.ip_ansible (expand)" -> "[root] azurerm_resource_group.rg1 (expand)"
+		"[root] azurerm_public_ip.ip_ingress (expand)" -> "[root] azurerm_kubernetes_cluster.cluster_k8sWorker (expand)"
+		"[root] azurerm_public_ip.ip_jenkins (expand)" -> "[root] azurerm_resource_group.rg1 (expand)"
+		"[root] azurerm_public_ip.ip_k8sMaster (expand)" -> "[root] azurerm_resource_group.rg1 (expand)"
+		"[root] azurerm_resource_group.rg1 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/azurerm\"]"
+		"[root] azurerm_resource_group.rg1 (expand)" -> "[root] var.location"
+		"[root] azurerm_resource_group.rg1 (expand)" -> "[root] var.rgname"
+		"[root] azurerm_role_assignment.accessClusterCreds (expand)" -> "[root] azurerm_user_assigned_identity.k8sClusterAccess (expand)"
+		"[root] azurerm_role_assignment.clusterAdmin (expand)" -> "[root] azurerm_user_assigned_identity.k8sClusterAccess (expand)"
+		"[root] azurerm_subnet.s0 (expand)" -> "[root] azurerm_virtual_network.vnet1 (expand)"
+		"[root] azurerm_user_assigned_identity.k8sClusterAccess (expand)" -> "[root] azurerm_resource_group.rg1 (expand)"
+		"[root] azurerm_virtual_network.vnet1 (expand)" -> "[root] azurerm_resource_group.rg1 (expand)"
+		"[root] local_file.local_key_ansible (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/local\"]"
+		"[root] local_file.local_key_ansible (expand)" -> "[root] tls_private_key.key_ansible (expand)"
+		"[root] local_file.local_key_jenkins (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/local\"]"
+		"[root] local_file.local_key_jenkins (expand)" -> "[root] tls_private_key.key_jenkins (expand)"
+		"[root] output.private_ip_ansible (expand)" -> "[root] azurerm_linux_virtual_machine.vm_ansible (expand)"
+		"[root] output.private_ip_jenkins (expand)" -> "[root] azurerm_linux_virtual_machine.vm_jenkins (expand)"
+		"[root] output.private_ip_k8sMaster (expand)" -> "[root] azurerm_linux_virtual_machine.vm_k8sMaster (expand)"
+		"[root] output.public_endpoint (expand)" -> "[root] azurerm_public_ip.ip_ingress (expand)"
+		"[root] output.public_ip_ansible (expand)" -> "[root] azurerm_linux_virtual_machine.vm_ansible (expand)"
+		"[root] output.public_ip_jenkins (expand)" -> "[root] azurerm_linux_virtual_machine.vm_jenkins (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/azurerm\"] (close)" -> "[root] azurerm_linux_virtual_machine.vm_ansible (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/azurerm\"] (close)" -> "[root] azurerm_linux_virtual_machine.vm_jenkins (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/azurerm\"] (close)" -> "[root] azurerm_network_interface_security_group_association.anisga_ansible (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/azurerm\"] (close)" -> "[root] azurerm_network_interface_security_group_association.anisga_jenkins (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/azurerm\"] (close)" -> "[root] azurerm_network_interface_security_group_association.anisga_k8sMaster (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/azurerm\"] (close)" -> "[root] azurerm_role_assignment.accessClusterCreds (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/azurerm\"] (close)" -> "[root] azurerm_role_assignment.clusterAdmin (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/local\"] (close)" -> "[root] local_file.local_key_ansible (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/local\"] (close)" -> "[root] local_file.local_key_jenkins (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/tls\"] (close)" -> "[root] tls_private_key.key_ansible (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/tls\"] (close)" -> "[root] tls_private_key.key_jenkins (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/tls\"] (close)" -> "[root] tls_private_key.key_k8sMaster (expand)"
+		"[root] root" -> "[root] output.private_ip_ansible (expand)"
+		"[root] root" -> "[root] output.private_ip_jenkins (expand)"
+		"[root] root" -> "[root] output.private_ip_k8sMaster (expand)"
+		"[root] root" -> "[root] output.public_endpoint (expand)"
+		"[root] root" -> "[root] output.public_ip_ansible (expand)"
+		"[root] root" -> "[root] output.public_ip_jenkins (expand)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/azurerm\"] (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/local\"] (close)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/tls\"] (close)"
+		"[root] tls_private_key.key_ansible (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/tls\"]"
+		"[root] tls_private_key.key_jenkins (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/tls\"]"
+		"[root] tls_private_key.key_k8sMaster (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/tls\"]"
+	}
+}
+
