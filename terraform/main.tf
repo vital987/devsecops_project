@@ -11,6 +11,8 @@ provider "azurerm" {
   features {}
 }
 
+data "azurerm_client_config" "current" {}
+
 resource "azurerm_resource_group" "rg1" {
   name     = var.rgname
   location = var.location
@@ -26,6 +28,13 @@ resource "azurerm_virtual_network" "vnet1" {
 resource "azurerm_subnet" "s0" {
   name                 = "s0"
   address_prefixes     = ["10.0.0.0/24"]
+  resource_group_name  = azurerm_resource_group.rg1.name
+  virtual_network_name = azurerm_virtual_network.vnet1.name
+}
+
+resource "azurerm_subnet" "s1" {
+  name                 = "s1"
+  address_prefixes     = ["10.0.1.0/24"]
   resource_group_name  = azurerm_resource_group.rg1.name
   virtual_network_name = azurerm_virtual_network.vnet1.name
 }

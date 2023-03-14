@@ -1,4 +1,3 @@
-set -x
 sudo apt-get update
 sudo apt-get install -y gnupg ca-certificates apt-transport-https curl python3 python3-pip
 curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null

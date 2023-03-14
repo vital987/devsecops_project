@@ -46,7 +46,7 @@ resource "azurerm_network_interface" "nic_jenkins" {
     name                          = "internal"
     subnet_id                     = azurerm_subnet.s0.id
     private_ip_address_allocation = "Static"
-    private_ip_address            = "10.0.0.5"
+    private_ip_address            = "10.0.0.4"
     public_ip_address_id          = azurerm_public_ip.ip_jenkins.id
   }
 }
@@ -55,7 +55,7 @@ resource "azurerm_linux_virtual_machine" "vm_jenkins" {
   name                  = "vm-jenkins"
   resource_group_name   = azurerm_resource_group.rg1.name
   location              = azurerm_resource_group.rg1.location
-  size                  = "Standard_B1s"
+  size                  = "Standard_B1ms"
   admin_username        = var.user
   network_interface_ids = [azurerm_network_interface.nic_jenkins.id]
   custom_data           = filebase64("../customData/jenkins.sh")

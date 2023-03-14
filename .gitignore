@@ -38,3 +38,6 @@ terraform.rc
 
 # SSH Keys
 sshKeys/*
+
+# Rough files
+**/*.rough

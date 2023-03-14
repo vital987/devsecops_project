@@ -19,7 +19,7 @@ resource "azurerm_public_ip" "ip_ingress" {
   resource_group_name = azurerm_kubernetes_cluster.cluster_k8sWorker.node_resource_group
   location            = azurerm_resource_group.rg1.location
   allocation_method   = "Static"
-  sku = "Standard"
+  sku                 = "Standard"
   depends_on = [
     azurerm_kubernetes_cluster.cluster_k8sWorker
   ]

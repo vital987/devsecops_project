@@ -1,0 +1,28 @@
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Finding latest version of hashicorp/tls...
+- Finding hashicorp/azurerm versions matching "3.44.1"...
+- Finding latest version of hashicorp/local...
+- Installing hashicorp/tls v4.0.4...
+- Installed hashicorp/tls v4.0.4 (signed by HashiCorp)
+- Installing hashicorp/azurerm v3.44.1...
+- Installed hashicorp/azurerm v3.44.1 (signed by HashiCorp)
+- Installing hashicorp/local v2.4.0...
+- Installed hashicorp/local v2.4.0 (signed by HashiCorp)
+
+Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.[0m
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m

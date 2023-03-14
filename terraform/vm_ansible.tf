@@ -30,9 +30,9 @@ resource "azurerm_network_interface" "nic_ansible" {
   location            = azurerm_resource_group.rg1.location
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_subnet.s0.id
+    subnet_id                     = azurerm_subnet.s1.id
     private_ip_address_allocation = "Static"
-    private_ip_address            = "10.0.0.6"
+    private_ip_address            = "10.0.1.4"
     public_ip_address_id          = azurerm_public_ip.ip_ansible.id
   }
 }

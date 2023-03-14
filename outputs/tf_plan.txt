@@ -1,0 +1,1042 @@
+[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wNGIwNzc5NS04ZGRiLTQ2MWEtYmJlZS0wMmY5ZTFiZjdiNDY7b2JqZWN0SWQ9MWMwMDUyNTctYmJjMy00OWNmLTkzZDEtNzQyNDVmZjBjZTMxO3N1YnNjcmlwdGlvbklkPTdkNWFlYWNmLWYzMzQtNGYwMi1hMmIxLTM3ZTY5YmFjMWUzZTt0ZW5hbnRJZD1mNGM1NTJiMi1kNDZmLTQ2NjYtOWZlMC1kYzUyY2E0ZTMzM2U=][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[1m  # azurerm_kubernetes_cluster.cluster_k8sWorker[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_kubernetes_cluster" "cluster_k8sWorker" {
+      [32m+[0m [0m[1m[0mapi_server_authorized_ip_ranges[0m[0m     = (known after apply)
+      [32m+[0m [0m[1m[0mdns_prefix[0m[0m                          = "k8sworkernode1"
+      [32m+[0m [0m[1m[0mfqdn[0m[0m                                = (known after apply)
+      [32m+[0m [0m[1m[0mhttp_application_routing_zone_name[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                                  = (known after apply)
+      [32m+[0m [0m[1m[0mimage_cleaner_enabled[0m[0m               = false
+      [32m+[0m [0m[1m[0mimage_cleaner_interval_hours[0m[0m        = 48
+      [32m+[0m [0m[1m[0mkube_admin_config[0m[0m                   = (sensitive value)
+      [32m+[0m [0m[1m[0mkube_admin_config_raw[0m[0m               = (sensitive value)
+      [32m+[0m [0m[1m[0mkube_config[0m[0m                         = (sensitive value)
+      [32m+[0m [0m[1m[0mkube_config_raw[0m[0m                     = (sensitive value)
+      [32m+[0m [0m[1m[0mkubernetes_version[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                            = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                                = "k8sWorker"
+      [32m+[0m [0m[1m[0mnode_resource_group[0m[0m                 = "k8sWorker_group"
+      [32m+[0m [0m[1m[0moidc_issuer_url[0m[0m                     = (known after apply)
+      [32m+[0m [0m[1m[0mportal_fqdn[0m[0m                         = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_cluster_enabled[0m[0m             = false
+      [32m+[0m [0m[1m[0mprivate_cluster_public_fqdn_enabled[0m[0m = false
+      [32m+[0m [0m[1m[0mprivate_dns_zone_id[0m[0m                 = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_fqdn[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_network_access_enabled[0m[0m       = true
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m                 = "cicd_pipeline"
+      [32m+[0m [0m[1m[0mrole_based_access_control_enabled[0m[0m   = true
+      [32m+[0m [0m[1m[0mrun_command_enabled[0m[0m                 = true
+      [32m+[0m [0m[1m[0msku_tier[0m[0m                            = "Free"
+      [32m+[0m [0m[1m[0mworkload_identity_enabled[0m[0m           = false
+
+      [32m+[0m [0mapi_server_access_profile {
+          [32m+[0m [0m[1m[0mauthorized_ip_ranges[0m[0m     = (known after apply)
+          [32m+[0m [0m[1m[0msubnet_id[0m[0m                = (known after apply)
+          [32m+[0m [0m[1m[0mvnet_integration_enabled[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mauto_scaler_profile {
+          [32m+[0m [0m[1m[0mbalance_similar_node_groups[0m[0m      = (known after apply)
+          [32m+[0m [0m[1m[0mempty_bulk_delete_max[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mexpander[0m[0m                         = (known after apply)
+          [32m+[0m [0m[1m[0mmax_graceful_termination_sec[0m[0m     = (known after apply)
+          [32m+[0m [0m[1m[0mmax_node_provisioning_time[0m[0m       = (known after apply)
+          [32m+[0m [0m[1m[0mmax_unready_nodes[0m[0m                = (known after apply)
+          [32m+[0m [0m[1m[0mmax_unready_percentage[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mnew_pod_scale_up_delay[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_delay_after_add[0m[0m       = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_delay_after_delete[0m[0m    = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_delay_after_failure[0m[0m   = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_unneeded[0m[0m              = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_unready[0m[0m               = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_utilization_threshold[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mscan_interval[0m[0m                    = (known after apply)
+          [32m+[0m [0m[1m[0mskip_nodes_with_local_storage[0m[0m    = (known after apply)
+          [32m+[0m [0m[1m[0mskip_nodes_with_system_pods[0m[0m      = (known after apply)
+        }
+
+      [32m+[0m [0mdefault_node_pool {
+          [32m+[0m [0m[1m[0menable_node_public_ip[0m[0m = true
+          [32m+[0m [0m[1m[0mkubelet_disk_type[0m[0m     = (known after apply)
+          [32m+[0m [0m[1m[0mmax_pods[0m[0m              = (known after apply)
+          [32m+[0m [0m[1m[0mname[0m[0m                  = "default"
+          [32m+[0m [0m[1m[0mnode_count[0m[0m            = 1
+          [32m+[0m [0m[1m[0mnode_labels[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0morchestrator_version[0m[0m  = (known after apply)
+          [32m+[0m [0m[1m[0mos_disk_size_gb[0m[0m       = (known after apply)
+          [32m+[0m [0m[1m[0mos_disk_type[0m[0m          = "Managed"
+          [32m+[0m [0m[1m[0mos_sku[0m[0m                = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_mode[0m[0m       = "Delete"
+          [32m+[0m [0m[1m[0mtype[0m[0m                  = "VirtualMachineScaleSets"
+          [32m+[0m [0m[1m[0multra_ssd_enabled[0m[0m     = false
+          [32m+[0m [0m[1m[0mvm_size[0m[0m               = "Standard_D2_v2"
+          [32m+[0m [0m[1m[0mworkload_runtime[0m[0m      = (known after apply)
+        }
+
+      [32m+[0m [0midentity {
+          [32m+[0m [0m[1m[0mprincipal_id[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtenant_id[0m[0m    = (known after apply)
+          [32m+[0m [0m[1m[0mtype[0m[0m         = "SystemAssigned"
+        }
+
+      [32m+[0m [0mkubelet_identity {
+          [32m+[0m [0m[1m[0mclient_id[0m[0m                 = (known after apply)
+          [32m+[0m [0m[1m[0mobject_id[0m[0m                 = (known after apply)
+          [32m+[0m [0m[1m[0muser_assigned_identity_id[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mnetwork_profile {
+          [32m+[0m [0m[1m[0mdns_service_ip[0m[0m      = (known after apply)
+          [32m+[0m [0m[1m[0mdocker_bridge_cidr[0m[0m  = (known after apply)
+          [32m+[0m [0m[1m[0mebpf_data_plane[0m[0m     = (known after apply)
+          [32m+[0m [0m[1m[0mip_versions[0m[0m         = (known after apply)
+          [32m+[0m [0m[1m[0mload_balancer_sku[0m[0m   = (known after apply)
+          [32m+[0m [0m[1m[0mnetwork_mode[0m[0m        = (known after apply)
+          [32m+[0m [0m[1m[0mnetwork_plugin[0m[0m      = (known after apply)
+          [32m+[0m [0m[1m[0mnetwork_plugin_mode[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mnetwork_policy[0m[0m      = (known after apply)
+          [32m+[0m [0m[1m[0moutbound_type[0m[0m       = (known after apply)
+          [32m+[0m [0m[1m[0mpod_cidr[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mpod_cidrs[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mservice_cidr[0m[0m        = (known after apply)
+          [32m+[0m [0m[1m[0mservice_cidrs[0m[0m       = (known after apply)
+
+          [32m+[0m [0mload_balancer_profile {
+              [32m+[0m [0m[1m[0meffective_outbound_ips[0m[0m      = (known after apply)
+              [32m+[0m [0m[1m[0midle_timeout_in_minutes[0m[0m     = (known after apply)
+              [32m+[0m [0m[1m[0mmanaged_outbound_ip_count[0m[0m   = (known after apply)
+              [32m+[0m [0m[1m[0mmanaged_outbound_ipv6_count[0m[0m = (known after apply)
+              [32m+[0m [0m[1m[0moutbound_ip_address_ids[0m[0m     = (known after apply)
+              [32m+[0m [0m[1m[0moutbound_ip_prefix_ids[0m[0m      = (known after apply)
+              [32m+[0m [0m[1m[0moutbound_ports_allocated[0m[0m    = (known after apply)
+            }
+
+          [32m+[0m [0mnat_gateway_profile {
+              [32m+[0m [0m[1m[0meffective_outbound_ips[0m[0m    = (known after apply)
+              [32m+[0m [0m[1m[0midle_timeout_in_minutes[0m[0m   = (known after apply)
+              [32m+[0m [0m[1m[0mmanaged_outbound_ip_count[0m[0m = (known after apply)
+            }
+        }
+
+      [32m+[0m [0mwindows_profile {
+          [32m+[0m [0m[1m[0madmin_password[0m[0m = (sensitive value)
+          [32m+[0m [0m[1m[0madmin_username[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mlicense[0m[0m        = (known after apply)
+
+          [32m+[0m [0mgmsa {
+              [32m+[0m [0m[1m[0mdns_server[0m[0m  = (known after apply)
+              [32m+[0m [0m[1m[0mroot_domain[0m[0m = (known after apply)
+            }
+        }
+    }
+
+[1m  # azurerm_linux_virtual_machine.vm_ansible[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_linux_virtual_machine" "vm_ansible" {
+      [32m+[0m [0m[1m[0madmin_username[0m[0m                  = "azureuser"
+      [32m+[0m [0m[1m[0mallow_extension_operations[0m[0m      = true
+      [32m+[0m [0m[1m[0mcomputer_name[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mcustom_data[0m[0m                     = (sensitive value)
+      [32m+[0m [0m[1m[0mdisable_password_authentication[0m[0m = true
+      [32m+[0m [0m[1m[0mextensions_time_budget[0m[0m          = "PT1H30M"
+      [32m+[0m [0m[1m[0mid[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                        = "centralindia"
+      [32m+[0m [0m[1m[0mmax_bid_price[0m[0m                   = -1
+      [32m+[0m [0m[1m[0mname[0m[0m                            = "vm-ansible"
+      [32m+[0m [0m[1m[0mnetwork_interface_ids[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mpatch_assessment_mode[0m[0m           = "ImageDefault"
+      [32m+[0m [0m[1m[0mpatch_mode[0m[0m                      = "ImageDefault"
+      [32m+[0m [0m[1m[0mplatform_fault_domain[0m[0m           = -1
+      [32m+[0m [0m[1m[0mpriority[0m[0m                        = "Regular"
+      [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip_addresses[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mprovision_vm_agent[0m[0m              = true
+      [32m+[0m [0m[1m[0mpublic_ip_address[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ip_addresses[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m             = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msize[0m[0m                            = "Standard_B1s"
+      [32m+[0m [0m[1m[0mvirtual_machine_id[0m[0m              = (known after apply)
+
+      [32m+[0m [0madmin_ssh_key {
+          [32m+[0m [0m[1m[0mpublic_key[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0musername[0m[0m   = "azureuser"
+        }
+
+      [32m+[0m [0mos_disk {
+          [32m+[0m [0m[1m[0mcaching[0m[0m                   = "ReadWrite"
+          [32m+[0m [0m[1m[0mdisk_size_gb[0m[0m              = 64
+          [32m+[0m [0m[1m[0mname[0m[0m                      = (known after apply)
+          [32m+[0m [0m[1m[0mstorage_account_type[0m[0m      = "Premium_LRS"
+          [32m+[0m [0m[1m[0mwrite_accelerator_enabled[0m[0m = false
+        }
+
+      [32m+[0m [0msource_image_reference {
+          [32m+[0m [0m[1m[0moffer[0m[0m     = "0001-com-ubuntu-server-jammy"
+          [32m+[0m [0m[1m[0mpublisher[0m[0m = "Canonical"
+          [32m+[0m [0m[1m[0msku[0m[0m       = "22_04-lts-gen2"
+          [32m+[0m [0m[1m[0mversion[0m[0m   = "latest"
+        }
+
+      [32m+[0m [0mtermination_notification {
+          [32m+[0m [0m[1m[0menabled[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtimeout[0m[0m = (known after apply)
+        }
+    }
+
+[1m  # azurerm_linux_virtual_machine.vm_jenkins[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_linux_virtual_machine" "vm_jenkins" {
+      [32m+[0m [0m[1m[0madmin_username[0m[0m                  = "azureuser"
+      [32m+[0m [0m[1m[0mallow_extension_operations[0m[0m      = true
+      [32m+[0m [0m[1m[0mcomputer_name[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mcustom_data[0m[0m                     = (sensitive value)
+      [32m+[0m [0m[1m[0mdisable_password_authentication[0m[0m = true
+      [32m+[0m [0m[1m[0mextensions_time_budget[0m[0m          = "PT1H30M"
+      [32m+[0m [0m[1m[0mid[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                        = "centralindia"
+      [32m+[0m [0m[1m[0mmax_bid_price[0m[0m                   = -1
+      [32m+[0m [0m[1m[0mname[0m[0m                            = "vm-jenkins"
+      [32m+[0m [0m[1m[0mnetwork_interface_ids[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mpatch_assessment_mode[0m[0m           = "ImageDefault"
+      [32m+[0m [0m[1m[0mpatch_mode[0m[0m                      = "ImageDefault"
+      [32m+[0m [0m[1m[0mplatform_fault_domain[0m[0m           = -1
+      [32m+[0m [0m[1m[0mpriority[0m[0m                        = "Regular"
+      [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip_addresses[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mprovision_vm_agent[0m[0m              = true
+      [32m+[0m [0m[1m[0mpublic_ip_address[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ip_addresses[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m             = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msize[0m[0m                            = "Standard_B1ms"
+      [32m+[0m [0m[1m[0mvirtual_machine_id[0m[0m              = (known after apply)
+
+      [32m+[0m [0madmin_ssh_key {
+          [32m+[0m [0m[1m[0mpublic_key[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0musername[0m[0m   = "azureuser"
+        }
+
+      [32m+[0m [0mos_disk {
+          [32m+[0m [0m[1m[0mcaching[0m[0m                   = "ReadWrite"
+          [32m+[0m [0m[1m[0mdisk_size_gb[0m[0m              = 64
+          [32m+[0m [0m[1m[0mname[0m[0m                      = (known after apply)
+          [32m+[0m [0m[1m[0mstorage_account_type[0m[0m      = "Premium_LRS"
+          [32m+[0m [0m[1m[0mwrite_accelerator_enabled[0m[0m = false
+        }
+
+      [32m+[0m [0msource_image_reference {
+          [32m+[0m [0m[1m[0moffer[0m[0m     = "0001-com-ubuntu-server-jammy"
+          [32m+[0m [0m[1m[0mpublisher[0m[0m = "Canonical"
+          [32m+[0m [0m[1m[0msku[0m[0m       = "22_04-lts-gen2"
+          [32m+[0m [0m[1m[0mversion[0m[0m   = "latest"
+        }
+
+      [32m+[0m [0mtermination_notification {
+          [32m+[0m [0m[1m[0menabled[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtimeout[0m[0m = (known after apply)
+        }
+    }
+
+[1m  # azurerm_linux_virtual_machine.vm_k8sMaster[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_linux_virtual_machine" "vm_k8sMaster" {
+      [32m+[0m [0m[1m[0madmin_username[0m[0m                  = "azureuser"
+      [32m+[0m [0m[1m[0mallow_extension_operations[0m[0m      = true
+      [32m+[0m [0m[1m[0mcomputer_name[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mdisable_password_authentication[0m[0m = true
+      [32m+[0m [0m[1m[0mextensions_time_budget[0m[0m          = "PT1H30M"
+      [32m+[0m [0m[1m[0mid[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                        = "centralindia"
+      [32m+[0m [0m[1m[0mmax_bid_price[0m[0m                   = -1
+      [32m+[0m [0m[1m[0mname[0m[0m                            = "vm-k8sMaster"
+      [32m+[0m [0m[1m[0mnetwork_interface_ids[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mpatch_assessment_mode[0m[0m           = "ImageDefault"
+      [32m+[0m [0m[1m[0mpatch_mode[0m[0m                      = "ImageDefault"
+      [32m+[0m [0m[1m[0mplatform_fault_domain[0m[0m           = -1
+      [32m+[0m [0m[1m[0mpriority[0m[0m                        = "Regular"
+      [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip_addresses[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mprovision_vm_agent[0m[0m              = true
+      [32m+[0m [0m[1m[0mpublic_ip_address[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ip_addresses[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m             = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msize[0m[0m                            = "Standard_B1s"
+      [32m+[0m [0m[1m[0mvirtual_machine_id[0m[0m              = (known after apply)
+
+      [32m+[0m [0madmin_ssh_key {
+          [32m+[0m [0m[1m[0mpublic_key[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0musername[0m[0m   = "azureuser"
+        }
+
+      [32m+[0m [0midentity {
+          [32m+[0m [0m[1m[0midentity_ids[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mprincipal_id[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtenant_id[0m[0m    = (known after apply)
+          [32m+[0m [0m[1m[0mtype[0m[0m         = "UserAssigned"
+        }
+
+      [32m+[0m [0mos_disk {
+          [32m+[0m [0m[1m[0mcaching[0m[0m                   = "ReadWrite"
+          [32m+[0m [0m[1m[0mdisk_size_gb[0m[0m              = 64
+          [32m+[0m [0m[1m[0mname[0m[0m                      = (known after apply)
+          [32m+[0m [0m[1m[0mstorage_account_type[0m[0m      = "Premium_LRS"
+          [32m+[0m [0m[1m[0mwrite_accelerator_enabled[0m[0m = false
+        }
+
+      [32m+[0m [0msource_image_reference {
+          [32m+[0m [0m[1m[0moffer[0m[0m     = "0001-com-ubuntu-server-jammy"
+          [32m+[0m [0m[1m[0mpublisher[0m[0m = "Canonical"
+          [32m+[0m [0m[1m[0msku[0m[0m       = "22_04-lts-gen2"
+          [32m+[0m [0m[1m[0mversion[0m[0m   = "latest"
+        }
+
+      [32m+[0m [0mtermination_notification {
+          [32m+[0m [0m[1m[0menabled[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtimeout[0m[0m = (known after apply)
+        }
+    }
+
+[1m  # azurerm_linux_virtual_machine.vm_vault[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_linux_virtual_machine" "vm_vault" {
+      [32m+[0m [0m[1m[0madmin_username[0m[0m                  = "azureuser"
+      [32m+[0m [0m[1m[0mallow_extension_operations[0m[0m      = true
+      [32m+[0m [0m[1m[0mcomputer_name[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mdisable_password_authentication[0m[0m = true
+      [32m+[0m [0m[1m[0mextensions_time_budget[0m[0m          = "PT1H30M"
+      [32m+[0m [0m[1m[0mid[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                        = "centralindia"
+      [32m+[0m [0m[1m[0mmax_bid_price[0m[0m                   = -1
+      [32m+[0m [0m[1m[0mname[0m[0m                            = "vm-vault"
+      [32m+[0m [0m[1m[0mnetwork_interface_ids[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mpatch_assessment_mode[0m[0m           = "ImageDefault"
+      [32m+[0m [0m[1m[0mpatch_mode[0m[0m                      = "ImageDefault"
+      [32m+[0m [0m[1m[0mplatform_fault_domain[0m[0m           = -1
+      [32m+[0m [0m[1m[0mpriority[0m[0m                        = "Regular"
+      [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip_addresses[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mprovision_vm_agent[0m[0m              = true
+      [32m+[0m [0m[1m[0mpublic_ip_address[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ip_addresses[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m             = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msize[0m[0m                            = "Standard_B1s"
+      [32m+[0m [0m[1m[0mvirtual_machine_id[0m[0m              = (known after apply)
+
+      [32m+[0m [0madmin_ssh_key {
+          [32m+[0m [0m[1m[0mpublic_key[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0musername[0m[0m   = "azureuser"
+        }
+
+      [32m+[0m [0mos_disk {
+          [32m+[0m [0m[1m[0mcaching[0m[0m                   = "ReadWrite"
+          [32m+[0m [0m[1m[0mdisk_size_gb[0m[0m              = 64
+          [32m+[0m [0m[1m[0mname[0m[0m                      = (known after apply)
+          [32m+[0m [0m[1m[0mstorage_account_type[0m[0m      = "Premium_LRS"
+          [32m+[0m [0m[1m[0mwrite_accelerator_enabled[0m[0m = false
+        }
+
+      [32m+[0m [0msource_image_reference {
+          [32m+[0m [0m[1m[0moffer[0m[0m     = "0001-com-ubuntu-server-jammy"
+          [32m+[0m [0m[1m[0mpublisher[0m[0m = "Canonical"
+          [32m+[0m [0m[1m[0msku[0m[0m       = "22_04-lts-gen2"
+          [32m+[0m [0m[1m[0mversion[0m[0m   = "latest"
+        }
+
+      [32m+[0m [0mtermination_notification {
+          [32m+[0m [0m[1m[0menabled[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mtimeout[0m[0m = (known after apply)
+        }
+    }
+
+[1m  # azurerm_network_interface.nic_ansible[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_interface" "nic_ansible" {
+      [32m+[0m [0m[1m[0mapplied_dns_servers[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mdns_servers[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0menable_accelerated_networking[0m[0m = false
+      [32m+[0m [0m[1m[0menable_ip_forwarding[0m[0m          = false
+      [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0minternal_dns_name_label[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0minternal_domain_name_suffix[0m[0m   = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                      = "centralindia"
+      [32m+[0m [0m[1m[0mmac_address[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                          = "nic_ansible"
+      [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip_addresses[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m           = "cicd_pipeline"
+      [32m+[0m [0m[1m[0mvirtual_machine_id[0m[0m            = (known after apply)
+
+      [32m+[0m [0mip_configuration {
+          [32m+[0m [0m[1m[0mgateway_load_balancer_frontend_ip_configuration_id[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mname[0m[0m                                               = "internal"
+          [32m+[0m [0m[1m[0mprimary[0m[0m                                            = (known after apply)
+          [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m                                 = "10.0.1.4"
+          [32m+[0m [0m[1m[0mprivate_ip_address_allocation[0m[0m                      = "Static"
+          [32m+[0m [0m[1m[0mprivate_ip_address_version[0m[0m                         = "IPv4"
+          [32m+[0m [0m[1m[0mpublic_ip_address_id[0m[0m                               = (known after apply)
+          [32m+[0m [0m[1m[0msubnet_id[0m[0m                                          = (known after apply)
+        }
+    }
+
+[1m  # azurerm_network_interface.nic_jenkins[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_interface" "nic_jenkins" {
+      [32m+[0m [0m[1m[0mapplied_dns_servers[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mdns_servers[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0menable_accelerated_networking[0m[0m = false
+      [32m+[0m [0m[1m[0menable_ip_forwarding[0m[0m          = false
+      [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0minternal_dns_name_label[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0minternal_domain_name_suffix[0m[0m   = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                      = "centralindia"
+      [32m+[0m [0m[1m[0mmac_address[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                          = "nic_jenkins"
+      [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip_addresses[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m           = "cicd_pipeline"
+      [32m+[0m [0m[1m[0mvirtual_machine_id[0m[0m            = (known after apply)
+
+      [32m+[0m [0mip_configuration {
+          [32m+[0m [0m[1m[0mgateway_load_balancer_frontend_ip_configuration_id[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mname[0m[0m                                               = "internal"
+          [32m+[0m [0m[1m[0mprimary[0m[0m                                            = (known after apply)
+          [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m                                 = "10.0.0.4"
+          [32m+[0m [0m[1m[0mprivate_ip_address_allocation[0m[0m                      = "Static"
+          [32m+[0m [0m[1m[0mprivate_ip_address_version[0m[0m                         = "IPv4"
+          [32m+[0m [0m[1m[0mpublic_ip_address_id[0m[0m                               = (known after apply)
+          [32m+[0m [0m[1m[0msubnet_id[0m[0m                                          = (known after apply)
+        }
+    }
+
+[1m  # azurerm_network_interface.nic_k8sMaster[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_interface" "nic_k8sMaster" {
+      [32m+[0m [0m[1m[0mapplied_dns_servers[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mdns_servers[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0menable_accelerated_networking[0m[0m = false
+      [32m+[0m [0m[1m[0menable_ip_forwarding[0m[0m          = false
+      [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0minternal_dns_name_label[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0minternal_domain_name_suffix[0m[0m   = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                      = "centralindia"
+      [32m+[0m [0m[1m[0mmac_address[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                          = "nic_k8sMaster"
+      [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip_addresses[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m           = "cicd_pipeline"
+      [32m+[0m [0m[1m[0mvirtual_machine_id[0m[0m            = (known after apply)
+
+      [32m+[0m [0mip_configuration {
+          [32m+[0m [0m[1m[0mgateway_load_balancer_frontend_ip_configuration_id[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mname[0m[0m                                               = "internal"
+          [32m+[0m [0m[1m[0mprimary[0m[0m                                            = (known after apply)
+          [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m                                 = "10.0.1.5"
+          [32m+[0m [0m[1m[0mprivate_ip_address_allocation[0m[0m                      = "Static"
+          [32m+[0m [0m[1m[0mprivate_ip_address_version[0m[0m                         = "IPv4"
+          [32m+[0m [0m[1m[0mpublic_ip_address_id[0m[0m                               = (known after apply)
+          [32m+[0m [0m[1m[0msubnet_id[0m[0m                                          = (known after apply)
+        }
+    }
+
+[1m  # azurerm_network_interface.nic_vault[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_interface" "nic_vault" {
+      [32m+[0m [0m[1m[0mapplied_dns_servers[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mdns_servers[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0menable_accelerated_networking[0m[0m = false
+      [32m+[0m [0m[1m[0menable_ip_forwarding[0m[0m          = false
+      [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0minternal_dns_name_label[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0minternal_domain_name_suffix[0m[0m   = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                      = "centralindia"
+      [32m+[0m [0m[1m[0mmac_address[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                          = "nic_vault"
+      [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip_addresses[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m           = "cicd_pipeline"
+      [32m+[0m [0m[1m[0mvirtual_machine_id[0m[0m            = (known after apply)
+
+      [32m+[0m [0mip_configuration {
+          [32m+[0m [0m[1m[0mgateway_load_balancer_frontend_ip_configuration_id[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mname[0m[0m                                               = "internal"
+          [32m+[0m [0m[1m[0mprimary[0m[0m                                            = (known after apply)
+          [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m                                 = "10.0.0.5"
+          [32m+[0m [0m[1m[0mprivate_ip_address_allocation[0m[0m                      = "Static"
+          [32m+[0m [0m[1m[0mprivate_ip_address_version[0m[0m                         = "IPv4"
+          [32m+[0m [0m[1m[0mpublic_ip_address_id[0m[0m                               = (known after apply)
+          [32m+[0m [0m[1m[0msubnet_id[0m[0m                                          = (known after apply)
+        }
+    }
+
+[1m  # azurerm_network_interface_security_group_association.anisga_ansible[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_interface_security_group_association" "anisga_ansible" {
+      [32m+[0m [0m[1m[0mid[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_security_group_id[0m[0m = (known after apply)
+    }
+
+[1m  # azurerm_network_interface_security_group_association.anisga_jenkins[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_interface_security_group_association" "anisga_jenkins" {
+      [32m+[0m [0m[1m[0mid[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_security_group_id[0m[0m = (known after apply)
+    }
+
+[1m  # azurerm_network_interface_security_group_association.anisga_k8sMaster[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_interface_security_group_association" "anisga_k8sMaster" {
+      [32m+[0m [0m[1m[0mid[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_security_group_id[0m[0m = (known after apply)
+    }
+
+[1m  # azurerm_network_interface_security_group_association.anisga_vault[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_interface_security_group_association" "anisga_vault" {
+      [32m+[0m [0m[1m[0mid[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_security_group_id[0m[0m = (known after apply)
+    }
+
+[1m  # azurerm_network_security_group.nsg_ansible[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_security_group" "nsg_ansible" {
+      [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m            = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                = "nsg_ansible"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msecurity_rule[0m[0m       = [
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "22"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "Allow-SSH"
+              [32m+[0m [0mpriority                                   = 200
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+        ]
+    }
+
+[1m  # azurerm_network_security_group.nsg_jenkins[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_security_group" "nsg_jenkins" {
+      [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m            = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                = "nsg_jenkins"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msecurity_rule[0m[0m       = [
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "22"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "Allow-SSH"
+              [32m+[0m [0mpriority                                   = 200
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "8080"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "Allow-Jenkins"
+              [32m+[0m [0mpriority                                   = 100
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+        ]
+    }
+
+[1m  # azurerm_network_security_group.nsg_k8sMaster[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_security_group" "nsg_k8sMaster" {
+      [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m            = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                = "nsg_k8sMaster"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msecurity_rule[0m[0m       = [
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "10250"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "KubeletAPI"
+              [32m+[0m [0mpriority                                   = 400
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "10257"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "kube-controller-manager"
+              [32m+[0m [0mpriority                                   = 600
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "10259"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "kube-scheduler"
+              [32m+[0m [0mpriority                                   = 500
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "22"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "Allow-SSH"
+              [32m+[0m [0mpriority                                   = 100
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "2379-2380"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "etcdServerClientAPI"
+              [32m+[0m [0mpriority                                   = 300
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "6443"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "KubernetesAPIserver"
+              [32m+[0m [0mpriority                                   = 200
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+        ]
+    }
+
+[1m  # azurerm_network_security_group.nsg_vault[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_security_group" "nsg_vault" {
+      [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m            = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                = "nsg_vault"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msecurity_rule[0m[0m       = [
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "22"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "Allow-SSH"
+              [32m+[0m [0mpriority                                   = 300
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "8200"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "Vault-API"
+              [32m+[0m [0mpriority                                   = 200
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0maccess                                     = "Allow"
+              [32m+[0m [0mdescription                                = ""
+              [32m+[0m [0mdestination_address_prefix                 = "*"
+              [32m+[0m [0mdestination_address_prefixes               = []
+              [32m+[0m [0mdestination_application_security_group_ids = []
+              [32m+[0m [0mdestination_port_range                     = "8201"
+              [32m+[0m [0mdestination_port_ranges                    = []
+              [32m+[0m [0mdirection                                  = "Inbound"
+              [32m+[0m [0mname                                       = "Raft-Replication-RequestForwarding"
+              [32m+[0m [0mpriority                                   = 100
+              [32m+[0m [0mprotocol                                   = "Tcp"
+              [32m+[0m [0msource_address_prefix                      = "*"
+              [32m+[0m [0msource_address_prefixes                    = []
+              [32m+[0m [0msource_application_security_group_ids      = []
+              [32m+[0m [0msource_port_range                          = "*"
+              [32m+[0m [0msource_port_ranges                         = []
+            },
+        ]
+    }
+
+[1m  # azurerm_public_ip.ip_ansible[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_public_ip" "ip_ansible" {
+      [32m+[0m [0m[1m[0mallocation_method[0m[0m       = "Dynamic"
+      [32m+[0m [0m[1m[0mddos_protection_mode[0m[0m    = "VirtualNetworkInherited"
+      [32m+[0m [0m[1m[0mfqdn[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4
+      [32m+[0m [0m[1m[0mip_address[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mip_version[0m[0m              = "IPv4"
+      [32m+[0m [0m[1m[0mlocation[0m[0m                = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                    = "ip_ansible"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m     = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msku[0m[0m                     = "Basic"
+      [32m+[0m [0m[1m[0msku_tier[0m[0m                = "Regional"
+    }
+
+[1m  # azurerm_public_ip.ip_ingress[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_public_ip" "ip_ingress" {
+      [32m+[0m [0m[1m[0mallocation_method[0m[0m       = "Static"
+      [32m+[0m [0m[1m[0mddos_protection_mode[0m[0m    = "VirtualNetworkInherited"
+      [32m+[0m [0m[1m[0mfqdn[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4
+      [32m+[0m [0m[1m[0mip_address[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mip_version[0m[0m              = "IPv4"
+      [32m+[0m [0m[1m[0mlocation[0m[0m                = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                    = "ip_ingress"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m     = "k8sWorker_group"
+      [32m+[0m [0m[1m[0msku[0m[0m                     = "Standard"
+      [32m+[0m [0m[1m[0msku_tier[0m[0m                = "Regional"
+    }
+
+[1m  # azurerm_public_ip.ip_jenkins[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_public_ip" "ip_jenkins" {
+      [32m+[0m [0m[1m[0mallocation_method[0m[0m       = "Dynamic"
+      [32m+[0m [0m[1m[0mddos_protection_mode[0m[0m    = "VirtualNetworkInherited"
+      [32m+[0m [0m[1m[0mfqdn[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4
+      [32m+[0m [0m[1m[0mip_address[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mip_version[0m[0m              = "IPv4"
+      [32m+[0m [0m[1m[0mlocation[0m[0m                = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                    = "ip_jenkins"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m     = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msku[0m[0m                     = "Basic"
+      [32m+[0m [0m[1m[0msku_tier[0m[0m                = "Regional"
+    }
+
+[1m  # azurerm_public_ip.ip_k8sMaster[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_public_ip" "ip_k8sMaster" {
+      [32m+[0m [0m[1m[0mallocation_method[0m[0m       = "Dynamic"
+      [32m+[0m [0m[1m[0mddos_protection_mode[0m[0m    = "VirtualNetworkInherited"
+      [32m+[0m [0m[1m[0mfqdn[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4
+      [32m+[0m [0m[1m[0mip_address[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mip_version[0m[0m              = "IPv4"
+      [32m+[0m [0m[1m[0mlocation[0m[0m                = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                    = "ip_k8sMaster"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m     = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msku[0m[0m                     = "Basic"
+      [32m+[0m [0m[1m[0msku_tier[0m[0m                = "Regional"
+    }
+
+[1m  # azurerm_public_ip.ip_vault[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_public_ip" "ip_vault" {
+      [32m+[0m [0m[1m[0mallocation_method[0m[0m       = "Dynamic"
+      [32m+[0m [0m[1m[0mddos_protection_mode[0m[0m    = "VirtualNetworkInherited"
+      [32m+[0m [0m[1m[0mfqdn[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4
+      [32m+[0m [0m[1m[0mip_address[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mip_version[0m[0m              = "IPv4"
+      [32m+[0m [0m[1m[0mlocation[0m[0m                = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                    = "ip_vault"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m     = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msku[0m[0m                     = "Basic"
+      [32m+[0m [0m[1m[0msku_tier[0m[0m                = "Regional"
+    }
+
+[1m  # azurerm_resource_group.rg1[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_resource_group" "rg1" {
+      [32m+[0m [0m[1m[0mid[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m     = "cicd_pipeline"
+    }
+
+[1m  # azurerm_role_assignment.accessClusterCreds[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_role_assignment" "accessClusterCreds" {
+      [32m+[0m [0m[1m[0mid[0m[0m                               = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                             = (known after apply)
+      [32m+[0m [0m[1m[0mprincipal_id[0m[0m                     = (known after apply)
+      [32m+[0m [0m[1m[0mprincipal_type[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mrole_definition_id[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mrole_definition_name[0m[0m             = "Azure Kubernetes Service Cluster Admin Role"
+      [32m+[0m [0m[1m[0mscope[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mskip_service_principal_aad_check[0m[0m = (known after apply)
+    }
+
+[1m  # azurerm_role_assignment.clusterAdmin[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_role_assignment" "clusterAdmin" {
+      [32m+[0m [0m[1m[0mid[0m[0m                               = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                             = (known after apply)
+      [32m+[0m [0m[1m[0mprincipal_id[0m[0m                     = (known after apply)
+      [32m+[0m [0m[1m[0mprincipal_type[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mrole_definition_id[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mrole_definition_name[0m[0m             = "Azure Kubernetes Service RBAC Cluster Admin"
+      [32m+[0m [0m[1m[0mscope[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mskip_service_principal_aad_check[0m[0m = (known after apply)
+    }
+
+[1m  # azurerm_subnet.s0[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_subnet" "s0" {
+      [32m+[0m [0m[1m[0maddress_prefixes[0m[0m                               = [
+          [32m+[0m [0m"10.0.0.0/24",
+        ]
+      [32m+[0m [0m[1m[0menforce_private_link_endpoint_network_policies[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0menforce_private_link_service_network_policies[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                                             = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                                           = "s0"
+      [32m+[0m [0m[1m[0mprivate_endpoint_network_policies_enabled[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_link_service_network_policies_enabled[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m                            = "cicd_pipeline"
+      [32m+[0m [0m[1m[0mvirtual_network_name[0m[0m                           = "vnet1"
+    }
+
+[1m  # azurerm_subnet.s1[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_subnet" "s1" {
+      [32m+[0m [0m[1m[0maddress_prefixes[0m[0m                               = [
+          [32m+[0m [0m"10.0.1.0/24",
+        ]
+      [32m+[0m [0m[1m[0menforce_private_link_endpoint_network_policies[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0menforce_private_link_service_network_policies[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                                             = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                                           = "s1"
+      [32m+[0m [0m[1m[0mprivate_endpoint_network_policies_enabled[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_link_service_network_policies_enabled[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m                            = "cicd_pipeline"
+      [32m+[0m [0m[1m[0mvirtual_network_name[0m[0m                           = "vnet1"
+    }
+
+[1m  # azurerm_user_assigned_identity.k8sClusterAccess[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_user_assigned_identity" "k8sClusterAccess" {
+      [32m+[0m [0m[1m[0mclient_id[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m            = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                = "k8sClusterAccess"
+      [32m+[0m [0m[1m[0mprincipal_id[0m[0m        = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline"
+      [32m+[0m [0m[1m[0mtenant_id[0m[0m           = (known after apply)
+    }
+
+[1m  # azurerm_virtual_network.vnet1[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_virtual_network" "vnet1" {
+      [32m+[0m [0m[1m[0maddress_space[0m[0m       = [
+          [32m+[0m [0m"10.0.0.0/16",
+        ]
+      [32m+[0m [0m[1m[0mdns_servers[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mguid[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m            = "centralindia"
+      [32m+[0m [0m[1m[0mname[0m[0m                = "vnet1"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline"
+      [32m+[0m [0m[1m[0msubnet[0m[0m              = (known after apply)
+    }
+
+[1m  # local_file.local_key_ansible[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "local_file" "local_key_ansible" {
+      [32m+[0m [0m[1m[0mcontent[0m[0m              = (sensitive value)
+      [32m+[0m [0m[1m[0mcontent_base64sha256[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_base64sha512[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_md5[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_sha1[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_sha256[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_sha512[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mdirectory_permission[0m[0m = "0777"
+      [32m+[0m [0m[1m[0mfile_permission[0m[0m      = "0600"
+      [32m+[0m [0m[1m[0mfilename[0m[0m             = "../sshKeys/ansible.key"
+      [32m+[0m [0m[1m[0mid[0m[0m                   = (known after apply)
+    }
+
+[1m  # local_file.local_key_jenkins[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "local_file" "local_key_jenkins" {
+      [32m+[0m [0m[1m[0mcontent[0m[0m              = (sensitive value)
+      [32m+[0m [0m[1m[0mcontent_base64sha256[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_base64sha512[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_md5[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_sha1[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_sha256[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_sha512[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mdirectory_permission[0m[0m = "0777"
+      [32m+[0m [0m[1m[0mfile_permission[0m[0m      = "0600"
+      [32m+[0m [0m[1m[0mfilename[0m[0m             = "../sshKeys/jenkins.key"
+      [32m+[0m [0m[1m[0mid[0m[0m                   = (known after apply)
+    }
+
+[1m  # local_file.local_key_vault[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "local_file" "local_key_vault" {
+      [32m+[0m [0m[1m[0mcontent[0m[0m              = (sensitive value)
+      [32m+[0m [0m[1m[0mcontent_base64sha256[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_base64sha512[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_md5[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_sha1[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_sha256[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mcontent_sha512[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mdirectory_permission[0m[0m = "0777"
+      [32m+[0m [0m[1m[0mfile_permission[0m[0m      = "0600"
+      [32m+[0m [0m[1m[0mfilename[0m[0m             = "../sshKeys/vault.key"
+      [32m+[0m [0m[1m[0mid[0m[0m                   = (known after apply)
+    }
+
+[1m  # tls_private_key.key_ansible[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "tls_private_key" "key_ansible" {
+      [32m+[0m [0m[1m[0malgorithm[0m[0m                     = "RSA"
+      [32m+[0m [0m[1m[0mecdsa_curve[0m[0m                   = "P224"
+      [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_key_openssh[0m[0m           = (sensitive value)
+      [32m+[0m [0m[1m[0mprivate_key_pem[0m[0m               = (sensitive value)
+      [32m+[0m [0m[1m[0mprivate_key_pem_pkcs8[0m[0m         = (sensitive value)
+      [32m+[0m [0m[1m[0mpublic_key_fingerprint_md5[0m[0m    = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_fingerprint_sha256[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_openssh[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_pem[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mrsa_bits[0m[0m                      = 4096
+    }
+
+[1m  # tls_private_key.key_jenkins[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "tls_private_key" "key_jenkins" {
+      [32m+[0m [0m[1m[0malgorithm[0m[0m                     = "RSA"
+      [32m+[0m [0m[1m[0mecdsa_curve[0m[0m                   = "P224"
+      [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_key_openssh[0m[0m           = (sensitive value)
+      [32m+[0m [0m[1m[0mprivate_key_pem[0m[0m               = (sensitive value)
+      [32m+[0m [0m[1m[0mprivate_key_pem_pkcs8[0m[0m         = (sensitive value)
+      [32m+[0m [0m[1m[0mpublic_key_fingerprint_md5[0m[0m    = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_fingerprint_sha256[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_openssh[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_pem[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mrsa_bits[0m[0m                      = 4096
+    }
+
+[1m  # tls_private_key.key_k8sMaster[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "tls_private_key" "key_k8sMaster" {
+      [32m+[0m [0m[1m[0malgorithm[0m[0m                     = "RSA"
+      [32m+[0m [0m[1m[0mecdsa_curve[0m[0m                   = "P224"
+      [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_key_openssh[0m[0m           = (sensitive value)
+      [32m+[0m [0m[1m[0mprivate_key_pem[0m[0m               = (sensitive value)
+      [32m+[0m [0m[1m[0mprivate_key_pem_pkcs8[0m[0m         = (sensitive value)
+      [32m+[0m [0m[1m[0mpublic_key_fingerprint_md5[0m[0m    = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_fingerprint_sha256[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_openssh[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_pem[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mrsa_bits[0m[0m                      = 4096
+    }
+
+[1m  # tls_private_key.key_vault[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "tls_private_key" "key_vault" {
+      [32m+[0m [0m[1m[0malgorithm[0m[0m                     = "RSA"
+      [32m+[0m [0m[1m[0mecdsa_curve[0m[0m                   = "P224"
+      [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_key_openssh[0m[0m           = (sensitive value)
+      [32m+[0m [0m[1m[0mprivate_key_pem[0m[0m               = (sensitive value)
+      [32m+[0m [0m[1m[0mprivate_key_pem_pkcs8[0m[0m         = (sensitive value)
+      [32m+[0m [0m[1m[0mpublic_key_fingerprint_md5[0m[0m    = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_fingerprint_sha256[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_openssh[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_pem[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mrsa_bits[0m[0m                      = 4096
+    }
+
+[0m[1mPlan:[0m 36 to add, 0 to change, 0 to destroy.
+[0m[0m
+[1mChanges to Outputs:[0m[0m
+  [32m+[0m [0m[1m[0mprivate_ip_ansible[0m[0m   = (known after apply)
+  [32m+[0m [0m[1m[0mprivate_ip_jenkins[0m[0m   = (known after apply)
+  [32m+[0m [0m[1m[0mprivate_ip_k8sMaster[0m[0m = (known after apply)
+  [32m+[0m [0m[1m[0mprivate_ip_vault[0m[0m     = (known after apply)
+  [32m+[0m [0m[1m[0mpublic_endpoint[0m[0m      = (known after apply)
+  [32m+[0m [0m[1m[0mpublic_ip_ansible[0m[0m    = (known after apply)
+  [32m+[0m [0m[1m[0mpublic_ip_jenkins[0m[0m    = (known after apply)
+  [32m+[0m [0m[1m[0mpublic_ip_vault[0m[0m      = (known after apply)
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Saved the plan to: plan.out
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "plan.out"

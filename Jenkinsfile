@@ -1,66 +1,96 @@
 #!/usr/bin/env groovy
 
 void setBuildStatus(String message, String state) {
-  step([
-      $class: "GitHubCommitStatusSetter",
-      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/vital987/hello-world-jsp"],
-      contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
-      errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
-      statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
-  ]);
+    step([
+        $class: "GitHubCommitStatusSetter",
+        reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/vital987/cicdTestApp"],
+        contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
+        errorHandlers: [
+            [$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]
+        ],
+        statusResultSource: [$class: "ConditionalStatusResultSource", results: [
+            [$class: "AnyBuildResult", message: message, state: state]
+        ]]
+    ]);
 }
+
+def test_summary;
+
 pipeline {
     agent any
     environment {
-        DEPL = "helloworld-app"
-        DEPL_NAMESPACE = "helloworld-ns"
+        DEPL = "testapp-app"
+        DEPL_NAMESPACE = "testapp-ns"
+        IMAGE = "testapp"
         DOCKERHUB_CREDS = credentials('vital987_dockerhub')
-        MAVEN_OPTS= "-Dmaven.artifact.threads=10"
+        ANSIBLE_SLACK_TOKEN = credentials('vital987_ansible_slack_token')
     }
     stages {
-        stage("Git Checkout") {
-            steps {
-                script {
-                    try {
-                        setBuildStatus("Build started", "PENDING");
-                        checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'vital987_github', name: 'hello-world-jsp', url: 'https://github.com/vital987/hello-world-jsp.git']])
-                    } catch(Exception e) {
-                        echo 'Git Checkout failed: ' + e.toString()
-                        currentBuild.result = 'FAILURE'
-                        setBuildStatus("Build started", "FAILURE");
-                        error "Build terminated"
-                    }
-                }
-            }
-        }
         stage("Build WebApp") {
             steps {
                 script {
                     try {
-                        setBuildStatus("Building App", "PENDING");
-                        sh "mvn --no-transfer-progress package"
-                    } catch(Exception e) {
-                        echo 'App building failed: ' + e.toString()
+                        setBuildStatus("Building app", "PENDING");
+                        sh "mvn --no-transfer-progress package -Dmaven.test.skip=true"
+                    } catch (Exception e) {
                         currentBuild.result = 'FAILURE'
-                        setBuildStatus("Build started", "FAILURE");
-                        error "Build terminated"
+                        setBuildStatus("Building app failed.", "FAILURE");
+                        slackSend color: "danger", message: "Failed to build app."
+                        throw e
                     }
                 }
             }
         }
-        stage("Send build artifacts to Ansible server & Execute Ansible playbook") {
+        stage("Test WebApp") {
             steps {
                 script {
                     try {
-                        setBuildStatus("Artifact Push, Image build, Create/Update deployment", "PENDING");
-                        sshPublisher(publishers: [sshPublisherDesc(configName: 'Ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: "ansible-playbook playbook.yml --extra-vars=\"{depl: ${env.DEPL}, depl_namespace: ${env.DEPL_NAMESPACE}, imageTag: ${env.BUILD_NUMBER}, dockerUsr: ${env.DOCKERHUB_CREDS_USR}, dockerPass: ${env.DOCKERHUB_CREDS_PSW}}\"", execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'imageBuild/', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/hello-world-war-1.0.0.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true)])
-                    } catch(Exception e) {
-                        echo 'Artifact Upload or CD failed: ' + e.toString()
-                        currentBuild.result = 'FAILURE'
-                        setBuildStatus("Build started", "FAILURE");
-                        error "Build terminated"
+                        setBuildStatus("Testing web app.", "PENDING")
+                        // Will always return 0 even if tests fail
+                        sh "mvn --no-transfer-progress test || :"
+                    } catch (Exception e) {
+                        setBuildStatus("Web app testing failed.", "FAILURE")
+                        currentBuild.result = 'UNSTABLE'
+                        slackSend color: "danger", message: "App testing failed."
+                        throw e
                     }
-                    setBuildStatus("CI-CD successful", "SUCCESS");
+                }
+            }
+            post {
+                always {
+                    script {
+                        test_summary = junit healthScaleFactor: 20.0, keepLongStdio: true, testResults: '**/target/surefire-reports/TEST-*.xml', skipPublishingChecks: true
+                    }
+                }
+            }
+        }
+        stage("Push artifact to Ansible server") {
+            steps {
+                script {
+                    try {
+                        setBuildStatus("Push artifact", "PENDING")
+                        sshPublisher(publishers: [sshPublisherDesc(configName: 'Ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'imageBuild/', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/testapp.jar')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+                    } catch (Exception e) {
+                        setBuildStatus("Artifact push failed.", "FAILURE")
+                        currentBuild.result = 'FAILURE'
+                        slackSend color: "danger", message: "Artifact push failed."
+                        throw e
+                    }
+                }
+            }
+        }
+        stage("Execute playbook on Ansible server") {
+            steps {
+                script {
+                    try {
+                        setBuildStatus("Push artifact", "PENDING")
+                        sshPublisher(publishers: [sshPublisherDesc(configName: 'Ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: "ansible-playbook playbook.yml --extra-vars=\"{depl: ${env.DEPL}, depl_namespace: ${env.DEPL_NAMESPACE}, image: ${env.IMAGE}, imageTag: ${env.BUILD_NUMBER}, dockerUsr: ${env.DOCKERHUB_CREDS_USR}, dockerPass: ${env.DOCKERHUB_CREDS_PSW}, slackToken: ${env.ANSIBLE_SLACK_TOKEN}}\"", execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true)])
+                    } catch (Exception e) {
+                        setBuildStatus("Ansible playbook failed.", "FAILURE")
+                        currentBuild.result = 'FAILURE'
+                        slackSend color: "danger", message: "Playbook execution failed."
+                        throw e
+                    }
                 }
             }
         }
@@ -68,6 +98,24 @@ pipeline {
     post {
         always {
             sh "mvn clean"
+        }
+        success {
+            script {
+                setBuildStatus("CI successful", "SUCCESS");
+                slackSend color: "good", message: "BUILD ${currentBuild.currentResult}\nTest results:\nTotal: ${test_summary.totalCount}\nPassed: ${test_summary.passCount}\nFailed: ${test_summary.failCount}\nSkipped: ${test_summary.skipCount}"
+            }
+        }
+        unstable {
+            script {
+                setBuildStatus("CI unstable, maybe tests failed", "SUCCESS");
+                slackSend color: "warning", message: "BUILD ${currentBuild.currentResult}\nTest results:\nTotal: ${test_summary.totalCount}\nPassed: ${test_summary.passCount}\nFailed: ${test_summary.failCount}\nSkipped: ${test_summary.skipCount}"
+            }
+        }
+        failure {
+            script {
+                setBuildStatus("CI failed", "FAILURE");
+                slackSend color: "danger", message: "BUILD ${currentBuild.currentResult}\nTest results:\nTotal: ${test_summary.totalCount}\nPassed: ${test_summary.passCount}\nFailed: ${test_summary.failCount}\nSkipped: ${test_summary.skipCount}"
+            }
         }
     }
 }

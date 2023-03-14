@@ -1,0 +1,338 @@
+Started by user Apurv
+Obtained Jenkinsfile from git https://github.com/vital987/cicdTestApp.git
+Resume disabled by user, switching to high-performance, low-durability mode.
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/cicdTestApp
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential vital987_github
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/cicdTestApp/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/vital987/cicdTestApp.git # timeout=10
+Fetching upstream changes from https://github.com/vital987/cicdTestApp.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials GitHub: vital987
+ > git fetch --tags --force --progress -- https://github.com/vital987/cicdTestApp.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision a5645f76ccf1c13096b502446f1ed2b9c4e8b0d0 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a5645f76ccf1c13096b502446f1ed2b9c4e8b0d0 # timeout=10
+Commit message: "initial commit"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withCredentials
+Masking supported pattern matches of $DOCKERHUB_CREDS or $DOCKERHUB_CREDS_USR or $DOCKERHUB_CREDS_PSW or $ANSIBLE_SLACK_TOKEN
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build WebApp)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] step
+[Set GitHub commit status (universal)] PENDING on repos [GHRepository@340dfa28[archived=false,commits={},compareUsePaginatedCommits=false,description=Basic spring boot app for testing purposes.,fork=false,homepage=,isTemplate=false,language=Java,milestones={},name=cicdTestApp,nodeId=R_kgDOJGbjyA,parent=<null>,size=18,source=<null>,visibility=public,createdAt=2023-03-07T10:56:12Z,id=610722760,nodeId=<null>,updatedAt=2023-03-13T22:55:37Z,url=https://api.github.com/repos/****/cicdTestApp]] (sha:a5645f7) with context:ci/jenkins/build-status
+Setting commit status on GitHub for https://github.com/****/cicdTestApp/commit/a5645f76ccf1c13096b502446f1ed2b9c4e8b0d0
+[Pipeline] sh
++ mvn --no-transfer-progress package -Dmaven.test.skip=true
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.****:testapp >------------------------
+[INFO] Building testapp 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.0:resources (default-resources) @ testapp ---
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ testapp ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /var/lib/jenkins/workspace/cicdTestApp/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.0:testResources (default-testResources) @ testapp ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:testCompile (default-testCompile) @ testapp ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M9:test (default-test) @ testapp ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.3.0:jar (default-jar) @ testapp ---
+[INFO] Building jar: /var/lib/jenkins/workspace/cicdTestApp/target/testapp.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:3.1.0-M1:repackage (repackage) @ testapp ---
+[INFO] Replacing main artifact /var/lib/jenkins/workspace/cicdTestApp/target/testapp.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /var/lib/jenkins/workspace/cicdTestApp/target/testapp.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.047 s
+[INFO] Finished at: 2023-03-13T22:56:57Z
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test WebApp)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] step
+[Set GitHub commit status (universal)] PENDING on repos [GHRepository@5f426628[archived=false,commits={},compareUsePaginatedCommits=false,description=Basic spring boot app for testing purposes.,fork=false,homepage=,isTemplate=false,language=Java,milestones={},name=cicdTestApp,nodeId=R_kgDOJGbjyA,parent=<null>,size=18,source=<null>,visibility=public,createdAt=2023-03-07T10:56:12Z,id=610722760,nodeId=<null>,updatedAt=2023-03-13T22:55:37Z,url=https://api.github.com/repos/****/cicdTestApp]] (sha:a5645f7) with context:ci/jenkins/build-status
+Setting commit status on GitHub for https://github.com/****/cicdTestApp/commit/a5645f76ccf1c13096b502446f1ed2b9c4e8b0d0
+[Pipeline] sh
++ mvn --no-transfer-progress test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.****:testapp >------------------------
+[INFO] Building testapp 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.0:resources (default-resources) @ testapp ---
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ testapp ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.0:testResources (default-testResources) @ testapp ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:testCompile (default-testCompile) @ testapp ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /var/lib/jenkins/workspace/cicdTestApp/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M9:test (default-test) @ testapp ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.****.testapp.SpringBootTestAppTests
+22:57:09.815 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [SpringBootTestAppTests]: using SpringBootContextLoader
+22:57:09.821 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.****.testapp.SpringBootTestAppTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:57:09.821 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.****.testapp.SpringBootTestAppTests]: SpringBootTestAppTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:57:09.902 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [SpringBootTestAppTests]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+22:57:10.066 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/var/lib/jenkins/workspace/cicdTestApp/target/classes/com/****/testapp/SpringBootTestApp.class]
+22:57:10.070 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.****.testapp.SpringBootTestApp for test class com.****.testapp.SpringBootTestAppTests
+22:57:10.300 [main] DEBUG org.springframework.test.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+22:57:10.302 [main] DEBUG org.springframework.test.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+22:57:10.309 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [SpringBootTestAppTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+22:57:10.310 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [SpringBootTestAppTests], class annotated with @DirtiesContext [false] with mode [null]
+22:57:10.423 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class com.****.testapp.SpringBootTestAppTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::             (v3.1.0-M1)
+
+2023-03-13T22:57:11.147Z  INFO 12927 --- [           main] c.v.testapp.SpringBootTestAppTests       : Starting SpringBootTestAppTests using Java 17.0.6 with PID 12927 (started by jenkins in /var/lib/jenkins/workspace/cicdTestApp)
+2023-03-13T22:57:11.148Z  INFO 12927 --- [           main] c.v.testapp.SpringBootTestAppTests       : No active profile set, falling back to 1 default profile: "default"
+2023-03-13T22:57:13.334Z  INFO 12927 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-03-13T22:57:13.359Z  INFO 12927 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-13T22:57:13.362Z  INFO 12927 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-13T22:57:13.707Z  INFO 12927 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-13T22:57:13.710Z  INFO 12927 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2515 ms
+2023-03-13T22:57:14.563Z  INFO 12927 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-03-13T22:57:15.625Z  INFO 12927 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 35815 (http) with context path ''
+2023-03-13T22:57:15.651Z  INFO 12927 --- [           main] c.v.testapp.SpringBootTestAppTests       : Started SpringBootTestAppTests in 5.148 seconds (process running for 7.736)
+2023-03-13T22:57:16.911Z  INFO 12927 --- [           main] i.g.bonigarcia.wdm.WebDriverManager      : Using chromedriver 111.0.5563.64 (resolved driver for Chrome 111)
+2023-03-13T22:57:16.954Z  INFO 12927 --- [           main] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as /var/lib/jenkins/.cache/selenium/chromedriver/linux64/111.0.5563.64/chromedriver
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 10092
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+2023-03-13T22:57:18.776Z  WARN 12927 --- [           main] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 111, so returning the closest version found: 110
+2023-03-13T22:57:18.998Z  INFO 12927 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-13T22:57:19.002Z  INFO 12927 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-13T22:57:19.003Z  INFO 12927 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-03-13T22:57:20.135Z  INFO 12927 --- [           main] i.g.bonigarcia.wdm.WebDriverManager      : Using chromedriver 111.0.5563.64 (resolved driver for Chrome 111)
+2023-03-13T22:57:20.149Z  INFO 12927 --- [           main] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as /var/lib/jenkins/.cache/selenium/chromedriver/linux64/111.0.5563.64/chromedriver
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 13114
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+2023-03-13T22:57:20.808Z  WARN 12927 --- [           main] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 111, so returning the closest version found: 110
+2023-03-13T22:57:21.279Z  INFO 12927 --- [           main] i.g.bonigarcia.wdm.WebDriverManager      : Using chromedriver 111.0.5563.64 (resolved driver for Chrome 111)
+2023-03-13T22:57:21.287Z  INFO 12927 --- [           main] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as /var/lib/jenkins/.cache/selenium/chromedriver/linux64/111.0.5563.64/chromedriver
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 5665
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+2023-03-13T22:57:21.925Z  WARN 12927 --- [           main] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 111, so returning the closest version found: 110
+2023-03-13T22:57:22.334Z  INFO 12927 --- [           main] i.g.bonigarcia.wdm.WebDriverManager      : Using chromedriver 111.0.5563.64 (resolved driver for Chrome 111)
+2023-03-13T22:57:22.341Z  INFO 12927 --- [           main] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as /var/lib/jenkins/.cache/selenium/chromedriver/linux64/111.0.5563.64/chromedriver
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 3245
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+2023-03-13T22:57:23.029Z  WARN 12927 --- [           main] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 111, so returning the closest version found: 110
+2023-03-13T22:57:23.109Z  INFO 12927 --- [           main] i.g.bonigarcia.wdm.WebDriverManager      : Using chromedriver 111.0.5563.64 (resolved driver for Chrome 111)
+2023-03-13T22:57:23.120Z  INFO 12927 --- [           main] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as /var/lib/jenkins/.cache/selenium/chromedriver/linux64/111.0.5563.64/chromedriver
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 16851
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+2023-03-13T22:57:23.654Z  WARN 12927 --- [           main] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 111, so returning the closest version found: 110
+[INFO] Tests run: 1;5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.41 s - in com.****.testapp.SpringBootTestAppTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.361 s
+[INFO] Finished at: 2023-03-13T22:57:24Z
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // script
+Post stage
+[Pipeline] script
+[Pipeline] {
+[Pipeline] junit
+Recording test results
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Push artifact to Ansible server)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] step
+[Set GitHub commit status (universal)] PENDING on repos [GHRepository@24a9e715[archived=false,commits={},compareUsePaginatedCommits=false,description=Basic spring boot app for testing purposes.,fork=false,homepage=,isTemplate=false,language=Java,milestones={},name=cicdTestApp,nodeId=R_kgDOJGbjyA,parent=<null>,size=18,source=<null>,visibility=public,createdAt=2023-03-07T10:56:12Z,id=610722760,nodeId=<null>,updatedAt=2023-03-13T22:55:37Z,url=https://api.github.com/repos/****/cicdTestApp]] (sha:a5645f7) with context:ci/jenkins/build-status
+Setting commit status on GitHub for https://github.com/****/cicdTestApp/commit/a5645f76ccf1c13096b502446f1ed2b9c4e8b0d0
+[Pipeline] sshPublisher
+SSH: Connecting from host [vm-jenkins]
+SSH: Connecting with configuration [Ansible] ...
+SSH: Disconnecting configuration [Ansible] ...
+SSH: Transferred 1 file(s)
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Execute playbook on Ansible server)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] step
+[Set GitHub commit status (universal)] PENDING on repos [GHRepository@3ed25140[archived=false,commits={},compareUsePaginatedCommits=false,description=Basic spring boot app for testing purposes.,fork=false,homepage=,isTemplate=false,language=Java,milestones={},name=cicdTestApp,nodeId=R_kgDOJGbjyA,parent=<null>,size=18,source=<null>,visibility=public,createdAt=2023-03-07T10:56:12Z,id=610722760,nodeId=<null>,updatedAt=2023-03-13T22:55:37Z,url=https://api.github.com/repos/****/cicdTestApp]] (sha:a5645f7) with context:ci/jenkins/build-status
+Setting commit status on GitHub for https://github.com/****/cicdTestApp/commit/a5645f76ccf1c13096b502446f1ed2b9c4e8b0d0
+[Pipeline] sshPublisher
+Warning: A secret was passed to "sshPublisher" using Groovy String interpolation, which is insecure.
+		 Affected argument(s) used the following variable(s): [DOCKERHUB_CREDS_USR, DOCKERHUB_CREDS_PSW, ANSIBLE_SLACK_TOKEN]
+		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
+SSH: Connecting from host [vm-jenkins]
+SSH: Connecting with configuration [Ansible] ...
+SSH: Creating session: username [azureuser], hostname [10.0.1.4], port [22]
+SSH: Connecting session ...
+SSH: Connected
+SSH: Opening exec channel ...
+SSH: EXEC: channel open
+SSH: EXEC: STDOUT/STDERR from command [ansible-playbook playbook.yml --extra-vars="{depl: testapp-app, depl_namespace: testapp-ns, image: testapp, imageTag: 1, dockerUsr: ****, dockerPass: ****, slackToken: ****}"] ...
+SSH: EXEC: connected
+
+PLAY [k8sMaster] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [10.0.1.5]
+
+TASK [Docker: Login] ***********************************************************
+changed: [10.0.1.5]
+
+TASK [Docker: Build & push tagged image] ***************************************
+changed: [10.0.1.5]
+
+TASK [Docker: Tag & push latest image] *****************************************
+ok: [10.0.1.5]
+
+TASK [Docker: Logout] **********************************************************
+changed: [10.0.1.5]
+
+TASK [Kubernetes: Check deployment] ********************************************
+fatal: [10.0.1.5]: FAILED! => {"changed": true, "cmd": ["kubectl", "describe", "deployment", "testapp-app", "--namespace", "testapp-ns"], "delta": "0:00:00.212252", "end": "2023-03-13 22:58:13.607118", "msg": "non-zero return code", "rc": 1, "start": "2023-03-13 22:58:13.394866", "stderr": "Error from server (NotFound): namespaces \"testapp-ns\" not found", "stderr_lines": ["Error from server (NotFound): namespaces \"testapp-ns\" not found"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [Message] *****************************************************************
+ok: [10.0.1.5] => {
+    "msg": "Kubernetes: Deployment testapp-app unavailable, creating one."
+}
+
+TASK [Message] *****************************************************************
+skipping: [10.0.1.5]
+
+TASK [Kubernetes: Create deployment] *******************************************
+changed: [10.0.1.5]
+
+TASK [Kubernetes: Update deployment] *******************************************
+skipping: [10.0.1.5]
+
+TASK [Docker: Remove tagged image] *********************************************
+changed: [10.0.1.5]
+
+RUNNING HANDLER [CdSuccessCreate] **********************************************
+ok: [10.0.1.5]
+
+PLAY RECAP *********************************************************************
+10.0.1.5                   : ok=10   changed=6    unreachable=0    failed=0    skipped=2    rescued=0    ignored=1   
+
+SSH: EXEC: completed after 51,236 ms
+SSH: Disconnecting configuration [Ansible] ...
+SSH: Transferred 0 file(s)
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] sh
++ mvn clean
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.****:testapp >------------------------
+[INFO] Building testapp 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ testapp ---
+[INFO] Deleting /var/lib/jenkins/workspace/cicdTestApp/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.123 s
+[INFO] Finished at: 2023-03-13T22:58:25Z
+[INFO] ------------------------------------------------------------------------
+[Pipeline] script
+[Pipeline] {
+[Pipeline] step
+[Set GitHub commit status (universal)] SUCCESS on repos [GHRepository@8f3e0f6[archived=false,commits={},compareUsePaginatedCommits=false,description=Basic spring boot app for testing purposes.,fork=false,homepage=,isTemplate=false,language=Java,milestones={},name=cicdTestApp,nodeId=R_kgDOJGbjyA,parent=<null>,size=18,source=<null>,visibility=public,createdAt=2023-03-07T10:56:12Z,id=610722760,nodeId=<null>,updatedAt=2023-03-13T22:55:37Z,url=https://api.github.com/repos/****/cicdTestApp]] (sha:a5645f7) with context:ci/jenkins/build-status
+Setting commit status on GitHub for https://github.com/****/cicdTestApp/commit/a5645f76ccf1c13096b502446f1ed2b9c4e8b0d0
+[Pipeline] slackSend
+Slack Send Pipeline step running, values are - baseUrl: <empty>, teamDomain: devopsproject-vkb2458, channel: , color: good, botUser: false, tokenCredentialId: ****_slack_token, notifyCommitters: false, iconEmoji: <empty>, username: <empty>, timestamp: <empty>
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

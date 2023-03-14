@@ -1,0 +1,1350 @@
+[0m[1mtls_private_key.key_k8sMaster: Refreshing state... [id=b0f86603c7f6fbaae07217994c71d5cf39b7f4e0][0m
+[0m[1mtls_private_key.key_jenkins: Refreshing state... [id=05f27cc6e8c0146a729dc61b44503d2d59dd0dd7][0m
+[0m[1mtls_private_key.key_vault: Refreshing state... [id=11b06905c8ce38cf698087253e5f01e1ed4df590][0m
+[0m[1mtls_private_key.key_ansible: Refreshing state... [id=7fc2bc50f8d56c6b4525aa28709a9fc1521c2548][0m
+[0m[1mlocal_file.local_key_jenkins: Refreshing state... [id=12d98bdc0ea17bddc7c94b1073e0cc16fc9c9823][0m
+[0m[1mlocal_file.local_key_ansible: Refreshing state... [id=c27ff53a68281a588220ea028e02ec2266879c6a][0m
+[0m[1mlocal_file.local_key_vault: Refreshing state... [id=b8b843abac1af907b2ce4a79f7de1062bbfdc7de][0m
+[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+[0m[1mazurerm_resource_group.rg1: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline][0m
+[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wNGIwNzc5NS04ZGRiLTQ2MWEtYmJlZS0wMmY5ZTFiZjdiNDY7b2JqZWN0SWQ9MWMwMDUyNTctYmJjMy00OWNmLTkzZDEtNzQyNDVmZjBjZTMxO3N1YnNjcmlwdGlvbklkPTdkNWFlYWNmLWYzMzQtNGYwMi1hMmIxLTM3ZTY5YmFjMWUzZTt0ZW5hbnRJZD1mNGM1NTJiMi1kNDZmLTQ2NjYtOWZlMC1kYzUyY2E0ZTMzM2U=][0m
+[0m[1mazurerm_public_ip.ip_k8sMaster: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_k8sMaster][0m
+[0m[1mazurerm_network_security_group.nsg_ansible: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_ansible][0m
+[0m[1mazurerm_network_security_group.nsg_jenkins: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_jenkins][0m
+[0m[1mazurerm_network_security_group.nsg_vault: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_vault][0m
+[0m[1mazurerm_public_ip.ip_jenkins: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_jenkins][0m
+[0m[1mazurerm_public_ip.ip_ansible: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_ansible][0m
+[0m[1mazurerm_virtual_network.vnet1: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1][0m
+[0m[1mazurerm_public_ip.ip_vault: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_vault][0m
+[0m[1mazurerm_network_security_group.nsg_k8sMaster: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_k8sMaster][0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.ContainerService/managedClusters/k8sWorker][0m
+[0m[1mazurerm_user_assigned_identity.k8sClusterAccess: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.ManagedIdentity/userAssignedIdentities/k8sClusterAccess][0m
+[0m[1mazurerm_role_assignment.accessClusterCreds: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Authorization/roleAssignments/5a434cfa-a5bf-c9c4-1776-7f76bf5444cf][0m
+[0m[1mazurerm_role_assignment.clusterAdmin: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Authorization/roleAssignments/8df43fa0-b85a-a26c-96db-982123795eb1][0m
+[0m[1mazurerm_subnet.s0: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s0][0m
+[0m[1mazurerm_subnet.s1: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s1][0m
+[0m[1mazurerm_network_interface.nic_vault: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_vault][0m
+[0m[1mazurerm_network_interface.nic_jenkins: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_jenkins][0m
+[0m[1mazurerm_network_interface.nic_ansible: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_ansible][0m
+[0m[1mazurerm_network_interface.nic_k8sMaster: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_k8sMaster][0m
+[0m[1mazurerm_public_ip.ip_ingress: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/k8sWorker_group/providers/Microsoft.Network/publicIPAddresses/ip_ingress][0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_jenkins: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_jenkins|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_jenkins][0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-jenkins][0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_vault: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_vault|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_vault][0m
+[0m[1mazurerm_linux_virtual_machine.vm_vault: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-vault][0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_k8sMaster: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_k8sMaster|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_k8sMaster][0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_ansible: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_ansible|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_ansible][0m
+[0m[1mazurerm_linux_virtual_machine.vm_k8sMaster: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-k8sMaster][0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Refreshing state... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-ansible][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy
+[0m
+Terraform will perform the following actions:
+
+[1m  # azurerm_kubernetes_cluster.cluster_k8sWorker[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_kubernetes_cluster" "cluster_k8sWorker" {
+      [31m-[0m [0m[1m[0mapi_server_authorized_ip_ranges[0m[0m     = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdns_prefix[0m[0m                          = "k8sworkernode1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_pod_security_policy[0m[0m          = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mfqdn[0m[0m                                = "k8sworkernode1-5xwvrarx.hcp.centralindia.azmk8s.io" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                                  = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.ContainerService/managedClusters/k8sWorker" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_cleaner_enabled[0m[0m               = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_cleaner_interval_hours[0m[0m        = 48 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mkube_admin_config[0m[0m                   = (sensitive value)
+      [31m-[0m [0m[1m[0mkube_config[0m[0m                         = (sensitive value)
+      [31m-[0m [0m[1m[0mkube_config_raw[0m[0m                     = (sensitive value)
+      [31m-[0m [0m[1m[0mkubernetes_version[0m[0m                  = "1.24.9" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocal_account_disabled[0m[0m              = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                            = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                                = "k8sWorker" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnode_resource_group[0m[0m                 = "k8sWorker_group" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0moidc_issuer_enabled[0m[0m                 = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mportal_fqdn[0m[0m                         = "k8sworkernode1-5xwvrarx.portal.hcp.centralindia.azmk8s.io" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_cluster_enabled[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_cluster_public_fqdn_enabled[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_network_access_enabled[0m[0m       = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m                 = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrole_based_access_control_enabled[0m[0m   = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrun_command_enabled[0m[0m                 = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku_tier[0m[0m                            = "Free" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                                = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mworkload_identity_enabled[0m[0m           = false [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mdefault_node_pool {
+          [31m-[0m [0m[1m[0mcustom_ca_trust_enabled[0m[0m      = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0menable_auto_scaling[0m[0m          = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0menable_host_encryption[0m[0m       = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0menable_node_public_ip[0m[0m        = true [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mfips_enabled[0m[0m                 = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mkubelet_disk_type[0m[0m            = "OS" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmax_count[0m[0m                    = 0 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmax_pods[0m[0m                     = 110 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmin_count[0m[0m                    = 0 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m                         = "default" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mnode_count[0m[0m                   = 1 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mnode_labels[0m[0m                  = {} [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mnode_taints[0m[0m                  = [] [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0monly_critical_addons_enabled[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0morchestrator_version[0m[0m         = "1.24.9" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mos_disk_size_gb[0m[0m              = 128 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mos_disk_type[0m[0m                 = "Managed" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mos_sku[0m[0m                       = "Ubuntu" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mscale_down_mode[0m[0m              = "Delete" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mtags[0m[0m                         = {} [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mtype[0m[0m                         = "VirtualMachineScaleSets" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0multra_ssd_enabled[0m[0m            = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mvm_size[0m[0m                      = "Standard_D2_v2" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mzones[0m[0m                        = [] [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0midentity {
+          [31m-[0m [0m[1m[0midentity_ids[0m[0m = [] [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprincipal_id[0m[0m = "75bfb51a-d3ff-49b1-a543-a2c661aef538" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mtenant_id[0m[0m    = "f4c552b2-d46f-4666-9fe0-dc52ca4e333e" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mtype[0m[0m         = "SystemAssigned" [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0mkubelet_identity {
+          [31m-[0m [0m[1m[0mclient_id[0m[0m                 = "ff68ab81-250d-4766-a804-c82220938266" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mobject_id[0m[0m                 = "6fd2ca9f-0fe8-4273-a047-857b5c23ca00" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0muser_assigned_identity_id[0m[0m = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/k8sWorker_group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/k8sWorker-agentpool" [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0mnetwork_profile {
+          [31m-[0m [0m[1m[0mdns_service_ip[0m[0m     = "10.0.0.10" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mdocker_bridge_cidr[0m[0m = "172.17.0.1/16" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mip_versions[0m[0m        = [
+              [31m-[0m [0m"IPv4",
+            ] [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mload_balancer_sku[0m[0m  = "standard" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mnetwork_plugin[0m[0m     = "kubenet" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0moutbound_type[0m[0m      = "loadBalancer" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mpod_cidr[0m[0m           = "10.244.0.0/16" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mpod_cidrs[0m[0m          = [
+              [31m-[0m [0m"10.244.0.0/16",
+            ] [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mservice_cidr[0m[0m       = "10.0.0.0/16" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mservice_cidrs[0m[0m      = [
+              [31m-[0m [0m"10.0.0.0/16",
+            ] [90m->[0m [0m[90mnull[0m[0m
+
+          [31m-[0m [0mload_balancer_profile {
+              [31m-[0m [0m[1m[0meffective_outbound_ips[0m[0m      = [
+                  [31m-[0m [0m"/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/k8sWorker_group/providers/Microsoft.Network/publicIPAddresses/8d5ecc40-c412-4c73-bbc2-668317cd1137",
+                ] [90m->[0m [0m[90mnull[0m[0m
+              [31m-[0m [0m[1m[0midle_timeout_in_minutes[0m[0m     = 0 [90m->[0m [0m[90mnull[0m[0m
+              [31m-[0m [0m[1m[0mmanaged_outbound_ip_count[0m[0m   = 1 [90m->[0m [0m[90mnull[0m[0m
+              [31m-[0m [0m[1m[0mmanaged_outbound_ipv6_count[0m[0m = 0 [90m->[0m [0m[90mnull[0m[0m
+              [31m-[0m [0m[1m[0moutbound_ip_address_ids[0m[0m     = [] [90m->[0m [0m[90mnull[0m[0m
+              [31m-[0m [0m[1m[0moutbound_ip_prefix_ids[0m[0m      = [] [90m->[0m [0m[90mnull[0m[0m
+              [31m-[0m [0m[1m[0moutbound_ports_allocated[0m[0m    = 0 [90m->[0m [0m[90mnull[0m[0m
+            }
+        }
+    }
+
+[1m  # azurerm_linux_virtual_machine.vm_ansible[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_linux_virtual_machine" "vm_ansible" {
+      [31m-[0m [0m[1m[0madmin_username[0m[0m                  = "azureuser" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mallow_extension_operations[0m[0m      = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcomputer_name[0m[0m                   = "vm-ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcustom_data[0m[0m                     = (sensitive value)
+      [31m-[0m [0m[1m[0mdisable_password_authentication[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mencryption_at_host_enabled[0m[0m      = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mextensions_time_budget[0m[0m          = "PT1H30M" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                              = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                        = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmax_bid_price[0m[0m                   = -1 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                            = "vm-ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_interface_ids[0m[0m           = [
+          [31m-[0m [0m"/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_ansible",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpatch_assessment_mode[0m[0m           = "ImageDefault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpatch_mode[0m[0m                      = "ImageDefault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mplatform_fault_domain[0m[0m           = -1 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpriority[0m[0m                        = "Regular" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m              = "10.0.1.4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_addresses[0m[0m            = [
+          [31m-[0m [0m"10.0.1.4",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprovision_vm_agent[0m[0m              = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip_address[0m[0m               = "4.224.24.104" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip_addresses[0m[0m             = [
+          [31m-[0m [0m"4.224.24.104",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m             = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecure_boot_enabled[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msize[0m[0m                            = "Standard_B1s" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                            = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_machine_id[0m[0m              = "99380063-00aa-48b2-adf9-731f0e30c7ae" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvtpm_enabled[0m[0m                    = false [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0madmin_ssh_key {
+          [31m-[0m [0m[1m[0mpublic_key[0m[0m = <<-EOT
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9GcbgUv4IFSJ2Z4MFPjp0RLVy1tebCAn41LShcQgBHrIGadleaFVIvpAQjvtL4jqt6OyjOFriVA/ddbPLfZz1PYPJ/rmr2rYWPJuCDcok1MYZtNnNds93FwdUNq6n76NK8TCJj5EFeDpxVGOP5ZM5gHS+xklBeyRAkbzuP5FEjupukOV4h+nfBTrxtEXojOsHa/RZDsr9gNxsSw8tLfh30K0Lp9IlzJtUHd4TJDFE+s1bltUdVz9D8lPuX292G7MemL0Rb4Ou4SZmU2agZr/IE88hWvgLRIIbE6Eg639U5YiZN6qjmFm6DNV8YaU++uU91nCWt3isscxORlwb84jClM4S5kh3tWS4+64T2IZM/WOOFdxsx7CqyXWqNN+FCXkNaa6zJd5ne6kc8yR7Qry8ES39T1zIlpnnRqozE5OutK9JqY2o621oPVKI6TiLB3DwbKd9Bk4Ru329Sxs7Xe83qFEMy/xgxa5vU8kt+0uMpoCzaJaWrnV1FPTWWnhidlz94cvEKAHdILqFzJacOYwPNu7n1A7mJYkzmkhgO08oBFNfI3cWVlu1ZJqCSPXYbRVzw6Pz683s+hBfbidGaDyi5tbBTzvPutYCVyKxD42717K3aBSw0S461Mn7mYwGkMCMp2x6LaIn29O4fUMCX2OtevQMvdHWIwdCdV/UVSxqVw==
+            EOT [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0musername[0m[0m   = "azureuser" [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0mos_disk {
+          [31m-[0m [0m[1m[0mcaching[0m[0m                   = "ReadWrite" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mdisk_size_gb[0m[0m              = 64 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m                      = "vm-ansible_disk1_8ccafdc3b03c4563bcb3ded6ad9a4d25" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mstorage_account_type[0m[0m      = "Premium_LRS" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mwrite_accelerator_enabled[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0msource_image_reference {
+          [31m-[0m [0m[1m[0moffer[0m[0m     = "0001-com-ubuntu-server-jammy" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mpublisher[0m[0m = "Canonical" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0msku[0m[0m       = "22_04-lts-gen2" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mversion[0m[0m   = "latest" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # azurerm_linux_virtual_machine.vm_jenkins[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_linux_virtual_machine" "vm_jenkins" {
+      [31m-[0m [0m[1m[0madmin_username[0m[0m                  = "azureuser" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mallow_extension_operations[0m[0m      = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcomputer_name[0m[0m                   = "vm-jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcustom_data[0m[0m                     = (sensitive value)
+      [31m-[0m [0m[1m[0mdisable_password_authentication[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mencryption_at_host_enabled[0m[0m      = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mextensions_time_budget[0m[0m          = "PT1H30M" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                              = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                        = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmax_bid_price[0m[0m                   = -1 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                            = "vm-jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_interface_ids[0m[0m           = [
+          [31m-[0m [0m"/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_jenkins",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpatch_assessment_mode[0m[0m           = "ImageDefault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpatch_mode[0m[0m                      = "ImageDefault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mplatform_fault_domain[0m[0m           = -1 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpriority[0m[0m                        = "Regular" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m              = "10.0.0.4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_addresses[0m[0m            = [
+          [31m-[0m [0m"10.0.0.4",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprovision_vm_agent[0m[0m              = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip_address[0m[0m               = "20.219.32.29" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip_addresses[0m[0m             = [
+          [31m-[0m [0m"20.219.32.29",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m             = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecure_boot_enabled[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msize[0m[0m                            = "Standard_B1ms" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                            = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_machine_id[0m[0m              = "06c3e3e3-4a90-4138-89d9-639113901677" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvtpm_enabled[0m[0m                    = false [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0madmin_ssh_key {
+          [31m-[0m [0m[1m[0mpublic_key[0m[0m = <<-EOT
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiNixHVZKuFZYT9ZOR4taLczOqEWPNk9TKw1+nT1rTtRQebRXff42iHe5n9DJdazwMytEIdSg5yDIhyEt7QNFQsOO+/DkJhPqQK/ReF63zskP5HNnnppMYyyB/4pNFi6ffuqHdUCd4wjq8i/pASmgUAhgp8/p6OntJP3T7pPHw3UD/u/p0uaW2G52T54aMkhJf0VL8FtedIjlxNbVmNbTVzTE8s9zTIOlksrsLkbVgR1Pq8z83hYdHzWSLJoMzE41hw7L1YcaIl+Fu1MSwVsTtJxlrgDqrvr7Uj6z75jiOr1BEp8nclDAlaUwviZukny1QctW42SkUGSKWMi4QYoYTlHxaUzUHR/L60NmC0h+3LWqMdXfgJXF682+PIBn5umOmfR3E5eMRkcp16myy5ryxmaFbK6W0S7hPNv61eNYqVFJDqzqcova1K4TptKAEPo53dYpwDKdF6ZPiL5/pRNy/lkI6IDVzXjpbng2Ax98AjmMF5gYeTmVcjFgjQyqma/4hEKhcqnM7pnmC0X1sHqV9hevt0YnS5uRu2sYdl8HdyiAECEJCapWbEaMz9cMgJwUZDq/wgRDjD4X2KrXmjb+J51UkSHeAdARGYUzpypq46H0e7L4r5QrowMCCWXUvCz9W6ayE/p55Aq/pVOwaj7fCNvugiaST7pRn3K2+C3ZTIQ==
+            EOT [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0musername[0m[0m   = "azureuser" [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0mos_disk {
+          [31m-[0m [0m[1m[0mcaching[0m[0m                   = "ReadWrite" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mdisk_size_gb[0m[0m              = 64 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m                      = "vm-jenkins_disk1_0928339dd7e4436ab5509c501011b81b" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mstorage_account_type[0m[0m      = "Premium_LRS" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mwrite_accelerator_enabled[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0msource_image_reference {
+          [31m-[0m [0m[1m[0moffer[0m[0m     = "0001-com-ubuntu-server-jammy" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mpublisher[0m[0m = "Canonical" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0msku[0m[0m       = "22_04-lts-gen2" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mversion[0m[0m   = "latest" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # azurerm_linux_virtual_machine.vm_k8sMaster[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_linux_virtual_machine" "vm_k8sMaster" {
+      [31m-[0m [0m[1m[0madmin_username[0m[0m                  = "azureuser" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mallow_extension_operations[0m[0m      = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcomputer_name[0m[0m                   = "vm-k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdisable_password_authentication[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mencryption_at_host_enabled[0m[0m      = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mextensions_time_budget[0m[0m          = "PT1H30M" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                              = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                        = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmax_bid_price[0m[0m                   = -1 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                            = "vm-k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_interface_ids[0m[0m           = [
+          [31m-[0m [0m"/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_k8sMaster",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpatch_assessment_mode[0m[0m           = "ImageDefault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpatch_mode[0m[0m                      = "ImageDefault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mplatform_fault_domain[0m[0m           = -1 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpriority[0m[0m                        = "Regular" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m              = "10.0.1.5" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_addresses[0m[0m            = [
+          [31m-[0m [0m"10.0.1.5",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprovision_vm_agent[0m[0m              = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip_address[0m[0m               = "20.219.33.163" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip_addresses[0m[0m             = [
+          [31m-[0m [0m"20.219.33.163",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m             = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecure_boot_enabled[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msize[0m[0m                            = "Standard_B1s" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                            = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_machine_id[0m[0m              = "7c15e8a7-d404-4aef-884b-5463d4863f79" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvtpm_enabled[0m[0m                    = false [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0madmin_ssh_key {
+          [31m-[0m [0m[1m[0mpublic_key[0m[0m = <<-EOT
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDoHIWUYwPo3qg8Oy9VsHKNEIYiCOSpSxHXqFDrWoJmEOgTD6P62Qgpv34hzz4F2Sui5aj8TZ++q7t3KzUUFEKatszeovpB4Whxj+1hhwZf6sht+P5G+Bp2fmJxjgzEd25xgu/SRlk96OcBci6Xmrjo6MI2mli4YotC563EztJt7AzEUksRmf4HiRkLSQl5bvRKifezWXTEvu2U8KWG2Rkf/wOM6YJcZ/N/USNA5+4Z6MDzj1PLKDksS6AsxeQFf4oYP770GexgRxphdXWfTd6U3lcxfAEZvuwU+BrDGKFMRdpJ0GGZG829YSKssb6GCR7OfiWWc2QWoA0sXCns+nymNFiGetD3cz4XOCjLFFnYfFyW+K8kAr638/Px9mH24wmGE+4E1aCnpfH8ygdt5UjHCx6YA7pPfoRBb5mYB1mZIqKW5sKmD7xCfYtTMr7ex1d8vJcm07pS1ncPlWKEiRo1YGqT8OmYy92ML+9PvAcwh3ClDBZP4KlnkCJyq3UNVswiesdrf33iW1HK9Sh79z+tXCQsfICCBiRrYVUAtxVrB5MCDIm0TQmwUbLQNWHFWtfMBTwUHb3ax2qpaaeGxXRRJEWBGcj5mrOSyFeFqWzgSwYTWlN76ITso1g6Tx9G9VuKrFvTMK7A218ralqjuwr+6sSko0AKn789n1YHJidpkw==
+            EOT [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0musername[0m[0m   = "azureuser" [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0midentity {
+          [31m-[0m [0m[1m[0midentity_ids[0m[0m = [
+              [31m-[0m [0m"/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.ManagedIdentity/userAssignedIdentities/k8sClusterAccess",
+            ] [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mtype[0m[0m         = "UserAssigned" [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0mos_disk {
+          [31m-[0m [0m[1m[0mcaching[0m[0m                   = "ReadWrite" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mdisk_size_gb[0m[0m              = 64 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m                      = "vm-k8sMaster_disk1_3957f78140fa49eeabc2f3eb373ab730" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mstorage_account_type[0m[0m      = "Premium_LRS" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mwrite_accelerator_enabled[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0msource_image_reference {
+          [31m-[0m [0m[1m[0moffer[0m[0m     = "0001-com-ubuntu-server-jammy" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mpublisher[0m[0m = "Canonical" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0msku[0m[0m       = "22_04-lts-gen2" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mversion[0m[0m   = "latest" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # azurerm_linux_virtual_machine.vm_vault[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_linux_virtual_machine" "vm_vault" {
+      [31m-[0m [0m[1m[0madmin_username[0m[0m                  = "azureuser" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mallow_extension_operations[0m[0m      = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcomputer_name[0m[0m                   = "vm-vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdisable_password_authentication[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mencryption_at_host_enabled[0m[0m      = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mextensions_time_budget[0m[0m          = "PT1H30M" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                              = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                        = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmax_bid_price[0m[0m                   = -1 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                            = "vm-vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_interface_ids[0m[0m           = [
+          [31m-[0m [0m"/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_vault",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpatch_assessment_mode[0m[0m           = "ImageDefault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpatch_mode[0m[0m                      = "ImageDefault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mplatform_fault_domain[0m[0m           = -1 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpriority[0m[0m                        = "Regular" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m              = "10.0.0.5" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_addresses[0m[0m            = [
+          [31m-[0m [0m"10.0.0.5",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprovision_vm_agent[0m[0m              = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip_address[0m[0m               = "20.207.205.101" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_ip_addresses[0m[0m             = [
+          [31m-[0m [0m"20.207.205.101",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m             = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecure_boot_enabled[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msize[0m[0m                            = "Standard_B1s" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                            = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_machine_id[0m[0m              = "a51448c4-279d-4f0f-afad-ae40c0c8bfec" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvtpm_enabled[0m[0m                    = false [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0madmin_ssh_key {
+          [31m-[0m [0m[1m[0mpublic_key[0m[0m = <<-EOT
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEuR1MDU94udO8Ua4jGRnQU4gib+v4CdgaolJJhX7Atjtb5852I/zX2X2dcuy054d7Q6lXix2RcF3m4Pds3cP/nYCez6NBYDlBMv/BYpj3Di2RN28FQrQtVvGx/hBi1yewJSObmrXhgoyIcEES2toPD0ME3wwaXO0VqEXZ7s4Zs40GgnUaVC9tMZSHBaRneKVf51Vjy0XJK9hybabxRzr72miZiqO651vJrfdXHyuuDuDUhD/FByzkrA5ZycaKXjVHbbLzJU2MJcqDDSfXaZqzX9f31T2ksiODEU/EKDMFzE6vPFcSX24o8vbBuNMAynVUSGbPtra/7aGBvuSnl283AA47EkwLosBGImD656lkx5ejh5Wwnsj9MfvRQlCQoS9iKVUpwnyONhPhPHAYfVKo45wMukt8EtN9U65wDJq7xs9gN403/wrDMnBCXYlW1H/PyirhB2aLuVd5AwamJ7aMSUpk2HErarho+YOXGuhOwPwPMMcjuovPXxwDvtxdp/mSLnL3GWI1pzLRNm/XF/lWukfWUchGSro5PxDm1QCxlnDoKQ283oTYTmYpVwdNqgVFqDg0Ihf59AhUnlWk17iTiTnredmIViMASrz6FhXRcmG+K05+Z0K39r+TkMGL6rMV8TRSO9mnf0y/n4OQ0/FHaylIclwW/MaR8PL8UaDqnQ==
+            EOT [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0musername[0m[0m   = "azureuser" [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0mos_disk {
+          [31m-[0m [0m[1m[0mcaching[0m[0m                   = "ReadWrite" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mdisk_size_gb[0m[0m              = 64 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m                      = "vm-vault_disk1_8aa4053835a146cab6a365a422faa022" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mstorage_account_type[0m[0m      = "Premium_LRS" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mwrite_accelerator_enabled[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0msource_image_reference {
+          [31m-[0m [0m[1m[0moffer[0m[0m     = "0001-com-ubuntu-server-jammy" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mpublisher[0m[0m = "Canonical" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0msku[0m[0m       = "22_04-lts-gen2" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mversion[0m[0m   = "latest" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # azurerm_network_interface.nic_ansible[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_interface" "nic_ansible" {
+      [31m-[0m [0m[1m[0mapplied_dns_servers[0m[0m           = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdns_servers[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_accelerated_networking[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_ip_forwarding[0m[0m          = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                            = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0minternal_domain_name_suffix[0m[0m   = "l3p4izbknudurdwaozcffomwmb.rx.internal.cloudapp.net" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                      = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmac_address[0m[0m                   = "60-45-BD-CF-15-54" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                          = "nic_ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m            = "10.0.1.4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_addresses[0m[0m          = [
+          [31m-[0m [0m"10.0.1.4",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m           = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                          = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_machine_id[0m[0m            = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-ansible" [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mip_configuration {
+          [31m-[0m [0m[1m[0mname[0m[0m                          = "internal" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprimary[0m[0m                       = true [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m            = "10.0.1.4" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address_allocation[0m[0m = "Static" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address_version[0m[0m    = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mpublic_ip_address_id[0m[0m          = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_ansible" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0msubnet_id[0m[0m                     = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s1" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # azurerm_network_interface.nic_jenkins[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_interface" "nic_jenkins" {
+      [31m-[0m [0m[1m[0mapplied_dns_servers[0m[0m           = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdns_servers[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_accelerated_networking[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_ip_forwarding[0m[0m          = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                            = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0minternal_domain_name_suffix[0m[0m   = "l3p4izbknudurdwaozcffomwmb.rx.internal.cloudapp.net" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                      = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmac_address[0m[0m                   = "60-45-BD-E8-06-93" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                          = "nic_jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m            = "10.0.0.4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_addresses[0m[0m          = [
+          [31m-[0m [0m"10.0.0.4",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m           = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                          = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_machine_id[0m[0m            = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-jenkins" [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mip_configuration {
+          [31m-[0m [0m[1m[0mname[0m[0m                          = "internal" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprimary[0m[0m                       = true [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m            = "10.0.0.4" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address_allocation[0m[0m = "Static" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address_version[0m[0m    = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mpublic_ip_address_id[0m[0m          = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_jenkins" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0msubnet_id[0m[0m                     = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s0" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # azurerm_network_interface.nic_k8sMaster[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_interface" "nic_k8sMaster" {
+      [31m-[0m [0m[1m[0mapplied_dns_servers[0m[0m           = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdns_servers[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_accelerated_networking[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_ip_forwarding[0m[0m          = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                            = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0minternal_domain_name_suffix[0m[0m   = "l3p4izbknudurdwaozcffomwmb.rx.internal.cloudapp.net" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                      = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmac_address[0m[0m                   = "60-45-BD-A5-E0-5A" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                          = "nic_k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m            = "10.0.1.5" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_addresses[0m[0m          = [
+          [31m-[0m [0m"10.0.1.5",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m           = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                          = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_machine_id[0m[0m            = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mip_configuration {
+          [31m-[0m [0m[1m[0mname[0m[0m                          = "internal" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprimary[0m[0m                       = true [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m            = "10.0.1.5" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address_allocation[0m[0m = "Static" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address_version[0m[0m    = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mpublic_ip_address_id[0m[0m          = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0msubnet_id[0m[0m                     = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s1" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # azurerm_network_interface.nic_vault[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_interface" "nic_vault" {
+      [31m-[0m [0m[1m[0mapplied_dns_servers[0m[0m           = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdns_servers[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_accelerated_networking[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_ip_forwarding[0m[0m          = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                            = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0minternal_domain_name_suffix[0m[0m   = "l3p4izbknudurdwaozcffomwmb.rx.internal.cloudapp.net" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                      = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmac_address[0m[0m                   = "60-45-BD-AE-9A-F7" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                          = "nic_vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m            = "10.0.0.5" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_ip_addresses[0m[0m          = [
+          [31m-[0m [0m"10.0.0.5",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m           = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                          = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_machine_id[0m[0m            = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-vault" [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mip_configuration {
+          [31m-[0m [0m[1m[0mname[0m[0m                          = "internal" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprimary[0m[0m                       = true [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m            = "10.0.0.5" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address_allocation[0m[0m = "Static" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mprivate_ip_address_version[0m[0m    = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mpublic_ip_address_id[0m[0m          = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_vault" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0msubnet_id[0m[0m                     = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s0" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # azurerm_network_interface_security_group_association.anisga_ansible[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_interface_security_group_association" "anisga_ansible" {
+      [31m-[0m [0m[1m[0mid[0m[0m                        = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_ansible|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_interface_id[0m[0m      = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_security_group_id[0m[0m = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_ansible" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_network_interface_security_group_association.anisga_jenkins[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_interface_security_group_association" "anisga_jenkins" {
+      [31m-[0m [0m[1m[0mid[0m[0m                        = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_jenkins|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_interface_id[0m[0m      = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_security_group_id[0m[0m = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_jenkins" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_network_interface_security_group_association.anisga_k8sMaster[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_interface_security_group_association" "anisga_k8sMaster" {
+      [31m-[0m [0m[1m[0mid[0m[0m                        = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_k8sMaster|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_interface_id[0m[0m      = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_security_group_id[0m[0m = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_network_interface_security_group_association.anisga_vault[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_interface_security_group_association" "anisga_vault" {
+      [31m-[0m [0m[1m[0mid[0m[0m                        = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_vault|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_interface_id[0m[0m      = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_security_group_id[0m[0m = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_vault" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_network_security_group.nsg_ansible[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_security_group" "nsg_ansible" {
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m            = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "nsg_ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_rule[0m[0m       = [
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "22"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "Allow-SSH"
+              [31m-[0m [0mpriority                                   = 200
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = {} [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_network_security_group.nsg_jenkins[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_security_group" "nsg_jenkins" {
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m            = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "nsg_jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_rule[0m[0m       = [
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "22"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "Allow-SSH"
+              [31m-[0m [0mpriority                                   = 200
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "8080"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "Allow-Jenkins"
+              [31m-[0m [0mpriority                                   = 100
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = {} [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_network_security_group.nsg_k8sMaster[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_security_group" "nsg_k8sMaster" {
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m            = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "nsg_k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_rule[0m[0m       = [
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "10250"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "KubeletAPI"
+              [31m-[0m [0mpriority                                   = 400
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "10257"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "kube-controller-manager"
+              [31m-[0m [0mpriority                                   = 600
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "10259"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "kube-scheduler"
+              [31m-[0m [0mpriority                                   = 500
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "22"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "Allow-SSH"
+              [31m-[0m [0mpriority                                   = 100
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "2379-2380"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "etcdServerClientAPI"
+              [31m-[0m [0mpriority                                   = 300
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "6443"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "KubernetesAPIserver"
+              [31m-[0m [0mpriority                                   = 200
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = {} [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_network_security_group.nsg_vault[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_security_group" "nsg_vault" {
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m            = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "nsg_vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_rule[0m[0m       = [
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "22"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "Allow-SSH"
+              [31m-[0m [0mpriority                                   = 300
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "8200"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "Vault-API"
+              [31m-[0m [0mpriority                                   = 200
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+          [31m-[0m [0m{
+              [31m-[0m [0maccess                                     = "Allow"
+              [31m-[0m [0mdescription                                = ""
+              [31m-[0m [0mdestination_address_prefix                 = "*"
+              [31m-[0m [0mdestination_address_prefixes               = []
+              [31m-[0m [0mdestination_application_security_group_ids = []
+              [31m-[0m [0mdestination_port_range                     = "8201"
+              [31m-[0m [0mdestination_port_ranges                    = []
+              [31m-[0m [0mdirection                                  = "Inbound"
+              [31m-[0m [0mname                                       = "Raft-Replication-RequestForwarding"
+              [31m-[0m [0mpriority                                   = 100
+              [31m-[0m [0mprotocol                                   = "Tcp"
+              [31m-[0m [0msource_address_prefix                      = "*"
+              [31m-[0m [0msource_address_prefixes                    = []
+              [31m-[0m [0msource_application_security_group_ids      = []
+              [31m-[0m [0msource_port_range                          = "*"
+              [31m-[0m [0msource_port_ranges                         = []
+            },
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = {} [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_public_ip.ip_ansible[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_public_ip" "ip_ansible" {
+      [31m-[0m [0m[1m[0mallocation_method[0m[0m       = "Dynamic" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mddos_protection_mode[0m[0m    = "VirtualNetworkInherited" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                      = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_address[0m[0m              = "4.224.24.104" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_tags[0m[0m                 = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_version[0m[0m              = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                    = "ip_ansible" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m     = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku[0m[0m                     = "Basic" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku_tier[0m[0m                = "Regional" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                    = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mzones[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_public_ip.ip_ingress[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_public_ip" "ip_ingress" {
+      [31m-[0m [0m[1m[0mallocation_method[0m[0m       = "Static" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mddos_protection_mode[0m[0m    = "VirtualNetworkInherited" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                      = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/k8sWorker_group/providers/Microsoft.Network/publicIPAddresses/ip_ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_address[0m[0m              = "20.219.158.220" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_tags[0m[0m                 = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_version[0m[0m              = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                    = "ip_ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m     = "k8sWorker_group" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku[0m[0m                     = "Standard" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku_tier[0m[0m                = "Regional" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                    = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mzones[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_public_ip.ip_jenkins[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_public_ip" "ip_jenkins" {
+      [31m-[0m [0m[1m[0mallocation_method[0m[0m       = "Dynamic" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mddos_protection_mode[0m[0m    = "VirtualNetworkInherited" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                      = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_address[0m[0m              = "20.219.32.29" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_tags[0m[0m                 = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_version[0m[0m              = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                    = "ip_jenkins" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m     = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku[0m[0m                     = "Basic" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku_tier[0m[0m                = "Regional" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                    = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mzones[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_public_ip.ip_k8sMaster[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_public_ip" "ip_k8sMaster" {
+      [31m-[0m [0m[1m[0mallocation_method[0m[0m       = "Dynamic" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mddos_protection_mode[0m[0m    = "VirtualNetworkInherited" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                      = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_address[0m[0m              = "20.219.33.163" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_tags[0m[0m                 = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_version[0m[0m              = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                    = "ip_k8sMaster" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m     = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku[0m[0m                     = "Basic" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku_tier[0m[0m                = "Regional" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                    = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mzones[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_public_ip.ip_vault[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_public_ip" "ip_vault" {
+      [31m-[0m [0m[1m[0mallocation_method[0m[0m       = "Dynamic" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mddos_protection_mode[0m[0m    = "VirtualNetworkInherited" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                      = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_address[0m[0m              = "20.207.205.101" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_tags[0m[0m                 = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_version[0m[0m              = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                    = "ip_vault" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m     = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku[0m[0m                     = "Basic" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msku_tier[0m[0m                = "Regional" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                    = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mzones[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_resource_group.rg1[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_resource_group" "rg1" {
+      [31m-[0m [0m[1m[0mid[0m[0m       = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m     = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m     = {} [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_role_assignment.accessClusterCreds[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_role_assignment" "accessClusterCreds" {
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Authorization/roleAssignments/5a434cfa-a5bf-c9c4-1776-7f76bf5444cf" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                 = "5a434cfa-a5bf-c9c4-1776-7f76bf5444cf" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprincipal_id[0m[0m         = "b2ebbd74-1200-4138-b17b-17c031a87760" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprincipal_type[0m[0m       = "ServicePrincipal" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrole_definition_id[0m[0m   = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/providers/Microsoft.Authorization/roleDefinitions/0ab0b1a8-8aac-4efd-b8c2-3ee1fb270be8" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrole_definition_name[0m[0m = "Azure Kubernetes Service Cluster Admin Role" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mscope[0m[0m                = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_role_assignment.clusterAdmin[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_role_assignment" "clusterAdmin" {
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Authorization/roleAssignments/8df43fa0-b85a-a26c-96db-982123795eb1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                 = "8df43fa0-b85a-a26c-96db-982123795eb1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprincipal_id[0m[0m         = "b2ebbd74-1200-4138-b17b-17c031a87760" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprincipal_type[0m[0m       = "ServicePrincipal" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrole_definition_id[0m[0m   = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/providers/Microsoft.Authorization/roleDefinitions/b1ff04bb-8a4e-4dc4-8eb5-8693973ce19b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrole_definition_name[0m[0m = "Azure Kubernetes Service RBAC Cluster Admin" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mscope[0m[0m                = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_subnet.s0[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_subnet" "s0" {
+      [31m-[0m [0m[1m[0maddress_prefixes[0m[0m                               = [
+          [31m-[0m [0m"10.0.0.0/24",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menforce_private_link_endpoint_network_policies[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menforce_private_link_service_network_policies[0m[0m  = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                                             = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                                           = "s0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_endpoint_network_policies_enabled[0m[0m      = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_link_service_network_policies_enabled[0m[0m  = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m                            = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mservice_endpoint_policy_ids[0m[0m                    = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mservice_endpoints[0m[0m                              = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_network_name[0m[0m                           = "vnet1" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_subnet.s1[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_subnet" "s1" {
+      [31m-[0m [0m[1m[0maddress_prefixes[0m[0m                               = [
+          [31m-[0m [0m"10.0.1.0/24",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menforce_private_link_endpoint_network_policies[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menforce_private_link_service_network_policies[0m[0m  = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                                             = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                                           = "s1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_endpoint_network_policies_enabled[0m[0m      = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_link_service_network_policies_enabled[0m[0m  = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m                            = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mservice_endpoint_policy_ids[0m[0m                    = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mservice_endpoints[0m[0m                              = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_network_name[0m[0m                           = "vnet1" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_user_assigned_identity.k8sClusterAccess[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_user_assigned_identity" "k8sClusterAccess" {
+      [31m-[0m [0m[1m[0mclient_id[0m[0m           = "0de3cd9c-c9b7-42f7-941d-316c97a3156c" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.ManagedIdentity/userAssignedIdentities/k8sClusterAccess" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m            = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "k8sClusterAccess" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprincipal_id[0m[0m        = "b2ebbd74-1200-4138-b17b-17c031a87760" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = {} [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m           = "f4c552b2-d46f-4666-9fe0-dc52ca4e333e" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # azurerm_virtual_network.vnet1[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_virtual_network" "vnet1" {
+      [31m-[0m [0m[1m[0maddress_space[0m[0m           = [
+          [31m-[0m [0m"10.0.0.0/16",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdns_servers[0m[0m             = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflow_timeout_in_minutes[0m[0m = 0 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mguid[0m[0m                    = "64e45f5f-6d2a-4807-8ec0-764452b99661" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                      = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                = "centralindia" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                    = "vnet1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m     = "cicd_pipeline" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet[0m[0m                  = [
+          [31m-[0m [0m{
+              [31m-[0m [0maddress_prefix = "10.0.0.0/24"
+              [31m-[0m [0mid             = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s0"
+              [31m-[0m [0mname           = "s0"
+              [31m-[0m [0msecurity_group = ""
+            },
+          [31m-[0m [0m{
+              [31m-[0m [0maddress_prefix = "10.0.1.0/24"
+              [31m-[0m [0mid             = "/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s1"
+              [31m-[0m [0mname           = "s1"
+              [31m-[0m [0msecurity_group = ""
+            },
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                    = {} [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # local_file.local_key_ansible[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "local_file" "local_key_ansible" {
+      [31m-[0m [0m[1m[0mcontent[0m[0m              = (sensitive value) [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_base64sha256[0m[0m = "rh1uBWq8faJlzPouGhVJc8P/W2Mf6og6yt2gn5PosEE=" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_base64sha512[0m[0m = "vJjthNx1ZRuFYPSRTLjWxjDkUT822bnY/JbL95QCa8xZH68lNsLgnwIL7E3f+my1IsN1s25MrhYU00mbmjhJkQ==" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_md5[0m[0m          = "2b98ce7f25b0a856d1dc2aa8b9a2cd3f" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_sha1[0m[0m         = "c27ff53a68281a588220ea028e02ec2266879c6a" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_sha256[0m[0m       = "ae1d6e056abc7da265ccfa2e1a154973c3ff5b631fea883acadda09f93e8b041" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_sha512[0m[0m       = "bc98ed84dc75651b8560f4914cb8d6c630e4513f36d9b9d8fc96cbf794026bcc591faf2536c2e09f020bec4ddffa6cb522c375b36e4cae1614d3499b9a384991" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdirectory_permission[0m[0m = "0777" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mfile_permission[0m[0m      = "0600" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mfilename[0m[0m             = "../sshKeys/ansible.key" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "c27ff53a68281a588220ea028e02ec2266879c6a" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # local_file.local_key_jenkins[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "local_file" "local_key_jenkins" {
+      [31m-[0m [0m[1m[0mcontent[0m[0m              = (sensitive value) [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_base64sha256[0m[0m = "YGUZ4df/FBNIIoNyDwuyUlPYs4TKoPWjVuCaJfiHjMo=" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_base64sha512[0m[0m = "9xcwfBc5ASwrqphg0dAFxrhX3rx6d2LRf7dGPBOX47RuE/Weh510zQ+alAqZhkDmRmRa2dUOhue0Ny9Ce0ySXA==" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_md5[0m[0m          = "f6b801423f5f4dd040f9781218e1d4e0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_sha1[0m[0m         = "12d98bdc0ea17bddc7c94b1073e0cc16fc9c9823" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_sha256[0m[0m       = "606519e1d7ff1413482283720f0bb25253d8b384caa0f5a356e09a25f8878cca" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_sha512[0m[0m       = "f717307c1739012c2baa9860d1d005c6b857debc7a7762d17fb7463c1397e3b46e13f59e879d74cd0f9a940a998640e646645ad9d50e86e7b4372f427b4c925c" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdirectory_permission[0m[0m = "0777" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mfile_permission[0m[0m      = "0600" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mfilename[0m[0m             = "../sshKeys/jenkins.key" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "12d98bdc0ea17bddc7c94b1073e0cc16fc9c9823" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # local_file.local_key_vault[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "local_file" "local_key_vault" {
+      [31m-[0m [0m[1m[0mcontent[0m[0m              = (sensitive value) [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_base64sha256[0m[0m = "4KjqdzoIziSlnTEXcepcN9KVzQJraGqjHoT0oLkYxBk=" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_base64sha512[0m[0m = "3bs8/JJQti6levjORyYn7i4GxMORDv9ZICSY2lbAcqodPnaPOqnJVuBFJ0fYYetmlvSkFS3vn62RsBz154j6NQ==" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_md5[0m[0m          = "9f36f43aed541a55ca19d6c2e8419197" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_sha1[0m[0m         = "b8b843abac1af907b2ce4a79f7de1062bbfdc7de" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_sha256[0m[0m       = "e0a8ea773a08ce24a59d311771ea5c37d295cd026b686aa31e84f4a0b918c419" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcontent_sha512[0m[0m       = "ddbb3cfc9250b62ea57af8ce472627ee2e06c4c3910eff59202498da56c072aa1d3e768f3aa9c956e0452747d861eb6696f4a4152def9fad91b01cf5e788fa35" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdirectory_permission[0m[0m = "0777" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mfile_permission[0m[0m      = "0600" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mfilename[0m[0m             = "../sshKeys/vault.key" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "b8b843abac1af907b2ce4a79f7de1062bbfdc7de" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # tls_private_key.key_ansible[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "tls_private_key" "key_ansible" {
+      [31m-[0m [0m[1m[0malgorithm[0m[0m                     = "RSA" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mecdsa_curve[0m[0m                   = "P224" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                            = "7fc2bc50f8d56c6b4525aa28709a9fc1521c2548" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_key_openssh[0m[0m           = (sensitive value)
+      [31m-[0m [0m[1m[0mprivate_key_pem[0m[0m               = (sensitive value)
+      [31m-[0m [0m[1m[0mprivate_key_pem_pkcs8[0m[0m         = (sensitive value)
+      [31m-[0m [0m[1m[0mpublic_key_fingerprint_md5[0m[0m    = "24:01:44:50:8d:31:fc:fd:ef:55:ad:ba:bd:5d:85:d5" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_fingerprint_sha256[0m[0m = "SHA256:Vz86Gw9fde/6f2QgyedcFzhtFo4WBQbwr+lfWRAs4rY" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_openssh[0m[0m            = <<-EOT
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9GcbgUv4IFSJ2Z4MFPjp0RLVy1tebCAn41LShcQgBHrIGadleaFVIvpAQjvtL4jqt6OyjOFriVA/ddbPLfZz1PYPJ/rmr2rYWPJuCDcok1MYZtNnNds93FwdUNq6n76NK8TCJj5EFeDpxVGOP5ZM5gHS+xklBeyRAkbzuP5FEjupukOV4h+nfBTrxtEXojOsHa/RZDsr9gNxsSw8tLfh30K0Lp9IlzJtUHd4TJDFE+s1bltUdVz9D8lPuX292G7MemL0Rb4Ou4SZmU2agZr/IE88hWvgLRIIbE6Eg639U5YiZN6qjmFm6DNV8YaU++uU91nCWt3isscxORlwb84jClM4S5kh3tWS4+64T2IZM/WOOFdxsx7CqyXWqNN+FCXkNaa6zJd5ne6kc8yR7Qry8ES39T1zIlpnnRqozE5OutK9JqY2o621oPVKI6TiLB3DwbKd9Bk4Ru329Sxs7Xe83qFEMy/xgxa5vU8kt+0uMpoCzaJaWrnV1FPTWWnhidlz94cvEKAHdILqFzJacOYwPNu7n1A7mJYkzmkhgO08oBFNfI3cWVlu1ZJqCSPXYbRVzw6Pz683s+hBfbidGaDyi5tbBTzvPutYCVyKxD42717K3aBSw0S461Mn7mYwGkMCMp2x6LaIn29O4fUMCX2OtevQMvdHWIwdCdV/UVSxqVw==
+        EOT [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_pem[0m[0m                = <<-EOT
+            -----BEGIN PUBLIC KEY-----
+            MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAvRnG4FL+CBUidmeDBT46
+            dES1ctbXmwgJ+NS0oXEIAR6yBmnZXmhVSL6QEI77S+I6rejsozha4lQP3XWzy32c
+            9T2Dyf65q9q2Fjybgg3KJNTGGbTZzXbPdxcHVDaup++jSvEwiY+RBXg6cVRjj+WT
+            OYB0vsZJQXskQJG87j+RRI7qbpDleIfp3wU68bRF6IzrB2v0WQ7K/YDcbEsPLS34
+            d9CtC6fSJcybVB3eEyQxRPrNW5bVHVc/Q/JT7l9vdhuzHpi9EW+DruEmZlNmoGa/
+            yBPPIVr4C0SCGxOhIOt/VOWImTeqo5hZugzVfGGlPvrlPdZwlrd4rLHMTkZcG/OI
+            wpTOEuZId7VkuPuuE9iGTP1jjhXcbMewqsl1qjTfhQl5DWmusyXeZ3upHPMke0K8
+            vBEt/U9cyJaZ50aqMxOTrrSvSamNqOttaD1SiOk4iwdw8GynfQZOEbt9vUsbO13v
+            N6hRDMv8YMWub1PJLftLjKaAs2iWlq51dRT01lp4YnZc/eHLxCgB3SC6hcyWnDmM
+            Dzbu59QO5iWJM5pIYDtPKARTXyN3FlZbtWSagkj12G0Vc8Oj8+vN7PoQX24nRmg8
+            oubWwU87z7rWAlcisQ+Nu9eyt2gUsNEuOtTJ+5mMBpDAjKdsei2iJ9vTuH1DAl9j
+            rXr0DL3R1iMHQnVf1FUsalcCAwEAAQ==
+            -----END PUBLIC KEY-----
+        EOT [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrsa_bits[0m[0m                      = 4096 [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # tls_private_key.key_jenkins[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "tls_private_key" "key_jenkins" {
+      [31m-[0m [0m[1m[0malgorithm[0m[0m                     = "RSA" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mecdsa_curve[0m[0m                   = "P224" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                            = "05f27cc6e8c0146a729dc61b44503d2d59dd0dd7" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_key_openssh[0m[0m           = (sensitive value)
+      [31m-[0m [0m[1m[0mprivate_key_pem[0m[0m               = (sensitive value)
+      [31m-[0m [0m[1m[0mprivate_key_pem_pkcs8[0m[0m         = (sensitive value)
+      [31m-[0m [0m[1m[0mpublic_key_fingerprint_md5[0m[0m    = "05:48:1a:6b:34:88:26:ec:99:ec:dc:7b:91:12:2c:26" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_fingerprint_sha256[0m[0m = "SHA256:DeRh1G1M06pdP+6eJJi8ok3rSXTDQNMTyW2Wkjt3EBU" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_openssh[0m[0m            = <<-EOT
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiNixHVZKuFZYT9ZOR4taLczOqEWPNk9TKw1+nT1rTtRQebRXff42iHe5n9DJdazwMytEIdSg5yDIhyEt7QNFQsOO+/DkJhPqQK/ReF63zskP5HNnnppMYyyB/4pNFi6ffuqHdUCd4wjq8i/pASmgUAhgp8/p6OntJP3T7pPHw3UD/u/p0uaW2G52T54aMkhJf0VL8FtedIjlxNbVmNbTVzTE8s9zTIOlksrsLkbVgR1Pq8z83hYdHzWSLJoMzE41hw7L1YcaIl+Fu1MSwVsTtJxlrgDqrvr7Uj6z75jiOr1BEp8nclDAlaUwviZukny1QctW42SkUGSKWMi4QYoYTlHxaUzUHR/L60NmC0h+3LWqMdXfgJXF682+PIBn5umOmfR3E5eMRkcp16myy5ryxmaFbK6W0S7hPNv61eNYqVFJDqzqcova1K4TptKAEPo53dYpwDKdF6ZPiL5/pRNy/lkI6IDVzXjpbng2Ax98AjmMF5gYeTmVcjFgjQyqma/4hEKhcqnM7pnmC0X1sHqV9hevt0YnS5uRu2sYdl8HdyiAECEJCapWbEaMz9cMgJwUZDq/wgRDjD4X2KrXmjb+J51UkSHeAdARGYUzpypq46H0e7L4r5QrowMCCWXUvCz9W6ayE/p55Aq/pVOwaj7fCNvugiaST7pRn3K2+C3ZTIQ==
+        EOT [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_pem[0m[0m                = <<-EOT
+            -----BEGIN PUBLIC KEY-----
+            MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAojYsR1WSrhWWE/WTkeLW
+            i3MzqhFjzZPUysNfp09a07UUHm0V33+Noh3uZ/QyXWs8DMrRCHUoOcgyIchLe0DR
+            ULDjvvw5CYT6kCv0Xhet87JD+RzZ56aTGMsgf+KTRYun37qh3VAneMI6vIv6QEpo
+            FAIYKfP6ejp7ST90+6Tx8N1A/7v6dLmlthudk+eGjJISX9FS/BbXnSI5cTW1ZjW0
+            1c0xPLPc0yDpZLK7C5G1YEdT6vM/N4WHR81kiyaDMxONYcOy9WHGiJfhbtTEsFbE
+            7ScZa4A6q76+1I+s++Y4jq9QRKfJ3JQwJWlML4mbpJ8tUHLVuNkpFBkiljIuEGKG
+            E5R8WlM1B0fy+tDZgtIfty1qjHV34CVxevNvjyAZ+bpjpn0dxOXjEZHKdepssua8
+            sZmhWyultEu4Tzb+tXjWKlRSQ6s6nKL2tSuE6bSgBD6Od3WKcAynRemT4i+f6UTc
+            v5ZCOiA1c146W54NgMffAI5jBeYGHk5lXIxYI0Mqpmv+IRCoXKpzO6Z5gtF9bB6l
+            fYXr7dGJ0ubkbtrGHZfB3cogBAhCQmqVmxGjM/XDICcFGQ6v8IEQ4w+F9iq15o2/
+            iedVJEh3gHQERmFM6cqauOh9Huy+K+UK6MDAgll1Lws/VumshP6eeQKv6VTsGo+3
+            wjb7oImkk+6UZ9ytvgt2UyECAwEAAQ==
+            -----END PUBLIC KEY-----
+        EOT [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrsa_bits[0m[0m                      = 4096 [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # tls_private_key.key_k8sMaster[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "tls_private_key" "key_k8sMaster" {
+      [31m-[0m [0m[1m[0malgorithm[0m[0m                     = "RSA" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mecdsa_curve[0m[0m                   = "P224" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                            = "b0f86603c7f6fbaae07217994c71d5cf39b7f4e0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_key_openssh[0m[0m           = (sensitive value)
+      [31m-[0m [0m[1m[0mprivate_key_pem[0m[0m               = (sensitive value)
+      [31m-[0m [0m[1m[0mprivate_key_pem_pkcs8[0m[0m         = (sensitive value)
+      [31m-[0m [0m[1m[0mpublic_key_fingerprint_md5[0m[0m    = "19:36:49:93:f4:3d:bb:39:fe:b7:46:44:01:96:52:ca" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_fingerprint_sha256[0m[0m = "SHA256:yrUJ6WhKjmaPEJB+rQOh2E7Kbm2JnLXoVAnxv0QA7AM" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_openssh[0m[0m            = <<-EOT
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDoHIWUYwPo3qg8Oy9VsHKNEIYiCOSpSxHXqFDrWoJmEOgTD6P62Qgpv34hzz4F2Sui5aj8TZ++q7t3KzUUFEKatszeovpB4Whxj+1hhwZf6sht+P5G+Bp2fmJxjgzEd25xgu/SRlk96OcBci6Xmrjo6MI2mli4YotC563EztJt7AzEUksRmf4HiRkLSQl5bvRKifezWXTEvu2U8KWG2Rkf/wOM6YJcZ/N/USNA5+4Z6MDzj1PLKDksS6AsxeQFf4oYP770GexgRxphdXWfTd6U3lcxfAEZvuwU+BrDGKFMRdpJ0GGZG829YSKssb6GCR7OfiWWc2QWoA0sXCns+nymNFiGetD3cz4XOCjLFFnYfFyW+K8kAr638/Px9mH24wmGE+4E1aCnpfH8ygdt5UjHCx6YA7pPfoRBb5mYB1mZIqKW5sKmD7xCfYtTMr7ex1d8vJcm07pS1ncPlWKEiRo1YGqT8OmYy92ML+9PvAcwh3ClDBZP4KlnkCJyq3UNVswiesdrf33iW1HK9Sh79z+tXCQsfICCBiRrYVUAtxVrB5MCDIm0TQmwUbLQNWHFWtfMBTwUHb3ax2qpaaeGxXRRJEWBGcj5mrOSyFeFqWzgSwYTWlN76ITso1g6Tx9G9VuKrFvTMK7A218ralqjuwr+6sSko0AKn789n1YHJidpkw==
+        EOT [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_pem[0m[0m                = <<-EOT
+            -----BEGIN PUBLIC KEY-----
+            MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA6ByFlGMD6N6oPDsvVbBy
+            jRCGIgjkqUsR16hQ61qCZhDoEw+j+tkIKb9+Ic8+BdkrouWo/E2fvqu7dys1FBRC
+            mrbM3qL6QeFocY/tYYcGX+rIbfj+Rvgadn5icY4MxHducYLv0kZZPejnAXIul5q4
+            6OjCNppYuGKLQuetxM7SbewMxFJLEZn+B4kZC0kJeW70Son3s1l0xL7tlPClhtkZ
+            H/8DjOmCXGfzf1EjQOfuGejA849Tyyg5LEugLMXkBX+KGD++9BnsYEcaYXV1n03e
+            lN5XMXwBGb7sFPgawxihTEXaSdBhmRvNvWEirLG+hgkezn4llnNkFqANLFwp7Pp8
+            pjRYhnrQ93M+FzgoyxRZ2HxclvivJAK+t/Pz8fZh9uMJhhPuBNWgp6Xx/MoHbeVI
+            xwsemAO6T36EQW+ZmAdZmSKilubCpg+8Qn2LUzK+3sdXfLyXJtO6UtZ3D5VihIka
+            NWBqk/DpmMvdjC/vT7wHMIdwpQwWT+CpZ5Aicqt1DVbMInrHa3994ltRyvUoe/c/
+            rVwkLHyAggYka2FVALcVaweTAgyJtE0JsFGy0DVhxVrXzAU8FB292sdqqWmnhsV0
+            USRFgRnI+ZqzkshXhals4EsGE1pTe+iE7KNYOk8fRvVbiqxb0zCuwNtfK2pao7sK
+            /urEpKNACp+/PZ9WByYnaZMCAwEAAQ==
+            -----END PUBLIC KEY-----
+        EOT [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrsa_bits[0m[0m                      = 4096 [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # tls_private_key.key_vault[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "tls_private_key" "key_vault" {
+      [31m-[0m [0m[1m[0malgorithm[0m[0m                     = "RSA" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mecdsa_curve[0m[0m                   = "P224" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                            = "11b06905c8ce38cf698087253e5f01e1ed4df590" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprivate_key_openssh[0m[0m           = (sensitive value)
+      [31m-[0m [0m[1m[0mprivate_key_pem[0m[0m               = (sensitive value)
+      [31m-[0m [0m[1m[0mprivate_key_pem_pkcs8[0m[0m         = (sensitive value)
+      [31m-[0m [0m[1m[0mpublic_key_fingerprint_md5[0m[0m    = "3d:a5:44:41:85:0f:f5:92:c6:99:11:2e:85:67:33:f3" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_fingerprint_sha256[0m[0m = "SHA256:S2NSG4PFqmfKCnJ37rKwkcsjM9/xE9fyYcIOR/RygBI" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_openssh[0m[0m            = <<-EOT
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEuR1MDU94udO8Ua4jGRnQU4gib+v4CdgaolJJhX7Atjtb5852I/zX2X2dcuy054d7Q6lXix2RcF3m4Pds3cP/nYCez6NBYDlBMv/BYpj3Di2RN28FQrQtVvGx/hBi1yewJSObmrXhgoyIcEES2toPD0ME3wwaXO0VqEXZ7s4Zs40GgnUaVC9tMZSHBaRneKVf51Vjy0XJK9hybabxRzr72miZiqO651vJrfdXHyuuDuDUhD/FByzkrA5ZycaKXjVHbbLzJU2MJcqDDSfXaZqzX9f31T2ksiODEU/EKDMFzE6vPFcSX24o8vbBuNMAynVUSGbPtra/7aGBvuSnl283AA47EkwLosBGImD656lkx5ejh5Wwnsj9MfvRQlCQoS9iKVUpwnyONhPhPHAYfVKo45wMukt8EtN9U65wDJq7xs9gN403/wrDMnBCXYlW1H/PyirhB2aLuVd5AwamJ7aMSUpk2HErarho+YOXGuhOwPwPMMcjuovPXxwDvtxdp/mSLnL3GWI1pzLRNm/XF/lWukfWUchGSro5PxDm1QCxlnDoKQ283oTYTmYpVwdNqgVFqDg0Ihf59AhUnlWk17iTiTnredmIViMASrz6FhXRcmG+K05+Z0K39r+TkMGL6rMV8TRSO9mnf0y/n4OQ0/FHaylIclwW/MaR8PL8UaDqnQ==
+        EOT [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key_pem[0m[0m                = <<-EOT
+            -----BEGIN PUBLIC KEY-----
+            MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAxLkdTA1PeLnTvFGuIxkZ
+            0FOIIm/r+AnYGqJSSYV+wLY7W+fOdiP819l9nXLstOeHe0OpV4sdkXBd5uD3bN3D
+            /52Ans+jQWA5QTL/wWKY9w4tkTdvBUK0LVbxsf4QYtcnsCUjm5q14YKMiHBBEtra
+            Dw9DBN8MGlztFahF2e7OGbONBoJ1GlQvbTGUhwWkZ3ilX+dVY8tFySvYcm2m8Uc6
+            +9pomYqjuudbya33Vx8rrg7g1IQ/xQcs5KwOWcnGil41R22y8yVNjCXKgw0n12ma
+            s1/X99U9pLIjgxFPxCgzBcxOrzxXEl9uKPL2wbjTAMp1VEhmz7a2v+2hgb7kp5dv
+            NwAOOxJMC6LARiJg+uepZMeXo4eVsJ7I/TH70UJQkKEvYilVKcJ8jjYT4TxwGH1S
+            qOOcDLpLfBLTfVOucAyau8bPYDeNN/8KwzJwQl2JVtR/z8oq4Qdmi7lXeQMGpie2
+            jElKZNhxK2q4aPmDlxroTsD8DzDHI7qLz18cA77cXaf5ki5y9xliNacy0TZv1xf5
+            VrpH1lHIRkq6OT8Q5tUAsZZw6CkNvN6E2E5mKVcHTaoFRag4NCIX+fQIVJ5VpNe4
+            k4k563nZiFYjAEq8+hYV0XJhvitOfmdCt/a/k5DBi+qzFfE0UjvZp39Mv5+DkNPx
+            R2spSHJcFvzGkfDy/FGg6p0CAwEAAQ==
+            -----END PUBLIC KEY-----
+        EOT [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrsa_bits[0m[0m                      = 4096 [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[0m[1mPlan:[0m 0 to add, 0 to change, 36 to destroy.
+[0m[0m
+[1mChanges to Outputs:[0m[0m
+  [31m-[0m [0m[1m[0mprivate_ip_ansible[0m[0m   = "10.0.1.4" [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mprivate_ip_jenkins[0m[0m   = "10.0.0.4" [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mprivate_ip_k8sMaster[0m[0m = "10.0.1.5" [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mprivate_ip_vault[0m[0m     = "10.0.0.5" [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mpublic_endpoint[0m[0m      = "20.219.158.220" [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mpublic_ip_ansible[0m[0m    = "4.224.24.104" [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mpublic_ip_jenkins[0m[0m    = "20.219.32.29" [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mpublic_ip_vault[0m[0m      = "20.207.205.101" [90m->[0m [0m[90mnull[0m[0m
+[0m[1mlocal_file.local_key_ansible: Destroying... [id=c27ff53a68281a588220ea028e02ec2266879c6a][0m[0m
+[0m[1mlocal_file.local_key_jenkins: Destroying... [id=12d98bdc0ea17bddc7c94b1073e0cc16fc9c9823][0m[0m
+[0m[1mlocal_file.local_key_vault: Destroying... [id=b8b843abac1af907b2ce4a79f7de1062bbfdc7de][0m[0m
+[0m[1mlocal_file.local_key_ansible: Destruction complete after 0s[0m
+[0m[1mlocal_file.local_key_vault: Destruction complete after 0s[0m
+[0m[1mlocal_file.local_key_jenkins: Destruction complete after 0s[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_vault: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_vault|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_vault][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_ansible: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_ansible|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_ansible][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_jenkins: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_jenkins|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_jenkins][0m[0m
+[0m[1mazurerm_role_assignment.accessClusterCreds: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Authorization/roleAssignments/5a434cfa-a5bf-c9c4-1776-7f76bf5444cf][0m[0m
+[0m[1mazurerm_role_assignment.clusterAdmin: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Authorization/roleAssignments/8df43fa0-b85a-a26c-96db-982123795eb1][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_k8sMaster: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_k8sMaster|/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_k8sMaster][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-ansible][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-jenkins][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_vault: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-vault][0m[0m
+[0m[1mazurerm_role_assignment.clusterAdmin: Destruction complete after 3s[0m
+[0m[1mazurerm_role_assignment.accessClusterCreds: Destruction complete after 6s[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...etwork/networkSecurityGroups/nsg_vault, 10s elapsed][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...work/networkSecurityGroups/nsg_ansible, 10s elapsed][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...work/networkSecurityGroups/nsg_jenkins, 10s elapsed][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...rk/networkSecurityGroups/nsg_k8sMaster, 10s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-ansible, 10s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-jenkins, 10s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...osoft.Compute/virtualMachines/vm-vault, 10s elapsed][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...work/networkSecurityGroups/nsg_jenkins, 20s elapsed][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...etwork/networkSecurityGroups/nsg_vault, 20s elapsed][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...work/networkSecurityGroups/nsg_ansible, 20s elapsed][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...rk/networkSecurityGroups/nsg_k8sMaster, 20s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-jenkins, 20s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...osoft.Compute/virtualMachines/vm-vault, 20s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-ansible, 20s elapsed][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_vault: Destruction complete after 22s[0m
+[0m[1mazurerm_network_security_group.nsg_vault: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_vault][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_ansible: Destruction complete after 25s[0m
+[0m[1mazurerm_network_security_group.nsg_ansible: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_ansible][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_jenkins: Destruction complete after 27s[0m
+[0m[1mazurerm_network_security_group.nsg_jenkins: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_jenkins][0m[0m
+[0m[1mazurerm_network_interface_security_group_association.anisga_k8sMaster: Destruction complete after 28s[0m
+[0m[1mazurerm_network_security_group.nsg_k8sMaster: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkSecurityGroups/nsg_k8sMaster][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-ansible, 30s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...osoft.Compute/virtualMachines/vm-vault, 30s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-jenkins, 30s elapsed][0m[0m
+[0m[1mazurerm_network_security_group.nsg_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...etwork/networkSecurityGroups/nsg_vault, 10s elapsed][0m[0m
+[0m[1mazurerm_network_security_group.nsg_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...work/networkSecurityGroups/nsg_ansible, 10s elapsed][0m[0m
+[0m[1mazurerm_network_security_group.nsg_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...work/networkSecurityGroups/nsg_jenkins, 10s elapsed][0m[0m
+[0m[1mazurerm_network_security_group.nsg_vault: Destruction complete after 15s[0m
+[0m[1mazurerm_network_security_group.nsg_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...rk/networkSecurityGroups/nsg_k8sMaster, 10s elapsed][0m[0m
+[0m[1mazurerm_network_security_group.nsg_ansible: Destruction complete after 15s[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-jenkins, 40s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...osoft.Compute/virtualMachines/vm-vault, 40s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-ansible, 40s elapsed][0m[0m
+[0m[1mazurerm_network_security_group.nsg_jenkins: Destruction complete after 14s[0m
+[0m[1mazurerm_network_security_group.nsg_k8sMaster: Destruction complete after 14s[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-ansible, 50s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-jenkins, 50s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...osoft.Compute/virtualMachines/vm-vault, 50s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-jenkins, 1m0s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...osoft.Compute/virtualMachines/vm-vault, 1m0s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-ansible, 1m0s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_vault: Destruction complete after 1m9s[0m
+[0m[1mazurerm_network_interface.nic_vault: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_vault][0m[0m
+[0m[1mtls_private_key.key_vault: Destroying... [id=11b06905c8ce38cf698087253e5f01e1ed4df590][0m[0m
+[0m[1mtls_private_key.key_vault: Destruction complete after 0s[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-jenkins, 1m10s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-ansible, 1m10s elapsed][0m[0m
+[0m[1mazurerm_network_interface.nic_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ft.Network/networkInterfaces/nic_vault, 10s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-jenkins, 1m20s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-ansible, 1m20s elapsed][0m[0m
+[0m[1mazurerm_network_interface.nic_vault: Destruction complete after 15s[0m
+[0m[1mazurerm_public_ip.ip_vault: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_vault][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-ansible, 1m30s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-jenkins, 1m30s elapsed][0m[0m
+[0m[1mazurerm_public_ip.ip_vault: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Network/publicIPAddresses/ip_vault, 10s elapsed][0m[0m
+[0m[1mazurerm_public_ip.ip_vault: Destruction complete after 15s[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-jenkins, 1m40s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...oft.Compute/virtualMachines/vm-ansible, 1m40s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_jenkins: Destruction complete after 1m43s[0m
+[0m[1mazurerm_network_interface.nic_jenkins: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_jenkins][0m[0m
+[0m[1mtls_private_key.key_jenkins: Destroying... [id=05f27cc6e8c0146a729dc61b44503d2d59dd0dd7][0m[0m
+[0m[1mtls_private_key.key_jenkins: Destruction complete after 0s[0m
+[0m[1mazurerm_linux_virtual_machine.vm_ansible: Destruction complete after 1m47s[0m
+[0m[1mazurerm_network_interface.nic_ansible: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_ansible][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_k8sMaster: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Compute/virtualMachines/vm-k8sMaster][0m[0m
+[0m[1mazurerm_network_interface.nic_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-....Network/networkInterfaces/nic_jenkins, 10s elapsed][0m[0m
+[0m[1mazurerm_network_interface.nic_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-....Network/networkInterfaces/nic_ansible, 10s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...t.Compute/virtualMachines/vm-k8sMaster, 10s elapsed][0m[0m
+[0m[1mazurerm_network_interface.nic_jenkins: Destruction complete after 15s[0m
+[0m[1mazurerm_public_ip.ip_jenkins: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_jenkins][0m[0m
+[0m[1mazurerm_subnet.s0: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s0][0m[0m
+[0m[1mazurerm_network_interface.nic_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-....Network/networkInterfaces/nic_ansible, 20s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...t.Compute/virtualMachines/vm-k8sMaster, 20s elapsed][0m[0m
+[0m[1mazurerm_public_ip.ip_jenkins: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...t.Network/publicIPAddresses/ip_jenkins, 10s elapsed][0m[0m
+[0m[1mazurerm_subnet.s0: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...twork/virtualNetworks/vnet1/subnets/s0, 10s elapsed][0m[0m
+[0m[1mazurerm_network_interface.nic_ansible: Destruction complete after 25s[0m
+[0m[1mazurerm_public_ip.ip_ansible: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_ansible][0m[0m
+[0m[1mazurerm_public_ip.ip_jenkins: Destruction complete after 18s[0m
+[0m[1mazurerm_linux_virtual_machine.vm_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...t.Compute/virtualMachines/vm-k8sMaster, 30s elapsed][0m[0m
+[0m[1mazurerm_subnet.s0: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...twork/virtualNetworks/vnet1/subnets/s0, 20s elapsed][0m[0m
+[0m[1mazurerm_public_ip.ip_ansible: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...t.Network/publicIPAddresses/ip_ansible, 10s elapsed][0m[0m
+[0m[1mazurerm_subnet.s0: Destruction complete after 28s[0m
+[0m[1mazurerm_linux_virtual_machine.vm_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...t.Compute/virtualMachines/vm-k8sMaster, 40s elapsed][0m[0m
+[0m[1mazurerm_public_ip.ip_ansible: Destruction complete after 15s[0m
+[0m[1mazurerm_linux_virtual_machine.vm_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...t.Compute/virtualMachines/vm-k8sMaster, 50s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...t.Compute/virtualMachines/vm-k8sMaster, 1m0s elapsed][0m[0m
+[0m[1mazurerm_linux_virtual_machine.vm_k8sMaster: Destruction complete after 1m2s[0m
+[0m[1mazurerm_user_assigned_identity.k8sClusterAccess: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.ManagedIdentity/userAssignedIdentities/k8sClusterAccess][0m[0m
+[0m[1mazurerm_public_ip.ip_ingress: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/k8sWorker_group/providers/Microsoft.Network/publicIPAddresses/ip_ingress][0m[0m
+[0m[1mazurerm_network_interface.nic_k8sMaster: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/networkInterfaces/nic_k8sMaster][0m[0m
+[0m[1mtls_private_key.key_k8sMaster: Destroying... [id=b0f86603c7f6fbaae07217994c71d5cf39b7f4e0][0m[0m
+[0m[1mtls_private_key.key_ansible: Destroying... [id=7fc2bc50f8d56c6b4525aa28709a9fc1521c2548][0m[0m
+[0m[1mtls_private_key.key_k8sMaster: Destruction complete after 0s[0m
+[0m[1mtls_private_key.key_ansible: Destruction complete after 0s[0m
+[0m[1mazurerm_user_assigned_identity.k8sClusterAccess: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...serAssignedIdentities/k8sClusterAccess, 10s elapsed][0m[0m
+[0m[1mazurerm_public_ip.ip_ingress: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...t.Network/publicIPAddresses/ip_ingress, 10s elapsed][0m[0m
+[0m[1mazurerm_network_interface.nic_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...etwork/networkInterfaces/nic_k8sMaster, 10s elapsed][0m[0m
+[0m[1mazurerm_user_assigned_identity.k8sClusterAccess: Destruction complete after 12s[0m
+[0m[1mazurerm_network_interface.nic_k8sMaster: Destruction complete after 17s[0m
+[0m[1mazurerm_subnet.s1: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/s1][0m[0m
+[0m[1mazurerm_public_ip.ip_k8sMaster: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/publicIPAddresses/ip_k8sMaster][0m[0m
+[0m[1mazurerm_public_ip.ip_ingress: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...t.Network/publicIPAddresses/ip_ingress, 20s elapsed][0m[0m
+[0m[1mazurerm_public_ip.ip_ingress: Destruction complete after 26s[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.ContainerService/managedClusters/k8sWorker][0m[0m
+[0m[1mazurerm_subnet.s1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...twork/virtualNetworks/vnet1/subnets/s1, 10s elapsed][0m[0m
+[0m[1mazurerm_public_ip.ip_k8sMaster: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...Network/publicIPAddresses/ip_k8sMaster, 10s elapsed][0m[0m
+[0m[1mazurerm_subnet.s1: Destruction complete after 13s[0m
+[0m[1mazurerm_virtual_network.vnet1: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline/providers/Microsoft.Network/virtualNetworks/vnet1][0m[0m
+[0m[1mazurerm_public_ip.ip_k8sMaster: Destruction complete after 16s[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 10s elapsed][0m[0m
+[0m[1mazurerm_virtual_network.vnet1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...icrosoft.Network/virtualNetworks/vnet1, 10s elapsed][0m[0m
+[0m[1mazurerm_virtual_network.vnet1: Destruction complete after 15s[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 20s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 30s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 40s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 50s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 1m0s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 1m10s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 1m20s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 1m30s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 1m40s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 1m50s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 2m0s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 2m10s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 2m20s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 2m30s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 2m40s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 2m50s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 3m0s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 3m10s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 3m20s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 3m30s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 3m40s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 3m50s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 4m0s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 4m10s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 4m20s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 4m30s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 4m40s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-...ainerService/managedClusters/k8sWorker, 4m50s elapsed][0m[0m
+[0m[1mazurerm_kubernetes_cluster.cluster_k8sWorker: Destruction complete after 4m51s[0m
+[0m[1mazurerm_resource_group.rg1: Destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 10s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 20s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 30s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 40s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 50s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 1m0s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 1m10s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 1m20s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 1m30s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 1m40s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 1m50s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Still destroying... [id=/subscriptions/7d5aeacf-f334-4f02-a2b1-37e69bac1e3e/resourceGroups/cicd_pipeline, 2m0s elapsed][0m[0m
+[0m[1mazurerm_resource_group.rg1: Destruction complete after 2m4s[0m
+[0m[1m[32m
+Destroy complete! Resources: 36 destroyed.
+[0m
