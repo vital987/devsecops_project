@@ -21,11 +21,30 @@ pipeline {
     environment {
         DEPL = "testapp-app"
         DEPL_NAMESPACE = "testapp-ns"
-        IMAGE = "testapp"
+        IMAGE = "vital987/testapp"
         DOCKERHUB_CREDS = credentials('vital987_dockerhub')
         ANSIBLE_SLACK_TOKEN = credentials('vital987_ansible_slack_token')
+        AZURE_STORAGE_ACCOUNT_NAME = "sa1nlptjrbeqcblkwjgqsme"
+        AZURE_STORAGE_CONTAINER_NAME = "trivy-reports"
     }
     stages {
+        stage("Scan WebApp") {
+            steps {
+                script {
+                    try {
+                        setBuildStatus("Scanning app", "PENDING");
+                        withSonarQubeEnv() {
+                            sh "mvn --no-transfer-progress clean verify sonar:sonar -Dsonar.projectKey=cicdTestApp -Dmaven.test.skip=true"
+                        }
+                    } catch (Exception e) {
+                        currentBuild.result = 'FAILURE'
+                        setBuildStatus("Scanning app failed.", "FAILURE");
+                        slackSend color: "danger", message: "Failed to scan app."
+                        throw e
+                    }
+                }
+            }
+        }
         stage("Build WebApp") {
             steps {
                 script {
@@ -48,6 +67,7 @@ pipeline {
                         setBuildStatus("Testing web app.", "PENDING")
                         // Will always return 0 even if tests fail
                         sh "mvn --no-transfer-progress test || :"
+                        sh "pkill chrome"
                     } catch (Exception e) {
                         setBuildStatus("Web app testing failed.", "FAILURE")
                         currentBuild.result = 'UNSTABLE'
@@ -59,7 +79,7 @@ pipeline {
             post {
                 always {
                     script {
-                        test_summary = junit healthScaleFactor: 20.0, keepLongStdio: true, testResults: '**/target/surefire-reports/TEST-*.xml', skipPublishingChecks: true
+                        test_summary = junit healthScaleFactor: 25.0, keepLongStdio: true, testResults: '**/target/surefire-reports/TEST-*.xml', skipPublishingChecks: true
                     }
                 }
             }
@@ -84,7 +104,7 @@ pipeline {
                 script {
                     try {
                         setBuildStatus("Push artifact", "PENDING")
-                        sshPublisher(publishers: [sshPublisherDesc(configName: 'Ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: "ansible-playbook playbook.yml --extra-vars=\"{depl: ${env.DEPL}, depl_namespace: ${env.DEPL_NAMESPACE}, image: ${env.IMAGE}, imageTag: ${env.BUILD_NUMBER}, dockerUsr: ${env.DOCKERHUB_CREDS_USR}, dockerPass: ${env.DOCKERHUB_CREDS_PSW}, slackToken: ${env.ANSIBLE_SLACK_TOKEN}}\"", execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true)])
+                        sshPublisher(publishers: [sshPublisherDesc(configName: 'Ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: "ansible-playbook playbooks/main.yml --extra-vars=\"{depl: ${env.DEPL}, depl_namespace: ${env.DEPL_NAMESPACE}, image: ${env.IMAGE}, imageTag: ${env.BUILD_NUMBER}, dockerUsr: ${env.DOCKERHUB_CREDS_USR}, dockerPass: ${env.DOCKERHUB_CREDS_PSW}, storageAccountName: ${env.AZURE_STORAGE_ACCOUNT_NAME}, storageContainerName: ${env.AZURE_STORAGE_CONTAINER_NAME}, slackToken: ${env.ANSIBLE_SLACK_TOKEN}}\"", execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true)])
                     } catch (Exception e) {
                         setBuildStatus("Ansible playbook failed.", "FAILURE")
                         currentBuild.result = 'FAILURE'

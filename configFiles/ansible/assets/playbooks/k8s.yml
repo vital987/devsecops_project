@@ -1,0 +1,52 @@
+- hosts: k8sMaster
+  tasks:
+  - name: "Kubernetes: Check deployment"
+    ansible.builtin.command: "kubectl describe deployment {{depl}} --namespace {{depl_namespace}}"
+    register: depl_chk
+    ignore_errors: true
+  - name: "Message"
+    ansible.builtin.debug:
+      msg: "Kubernetes: Deployment {{depl}} unavailable, creating one."
+    when: depl_chk is failed
+  - name: "Message"
+    ansible.builtin.debug:
+      msg: "Kubernetes: Deployment {{depl}} found, updating images to recently tagged one."
+    when: depl_chk is succeeded
+  - block:
+    - name: "Kubernetes: Create deployment"
+      kubernetes.core.k8s:
+        state: present
+        template: ~/deployment.yml
+      when: depl_chk is failed
+      notify:
+      - CdSuccessCreate
+    rescue:
+    - slack:
+        token: "{{slackToken}}"
+        msg: "CD failed: k8s failed to create deployment."
+        color: danger
+  - block:
+    - name: "Kubernetes: Update deployment"
+      ansible.builtin.command: "kubectl set image deployment {{depl}} {{depl}}={{image}}:{{imageTag}} --namespace {{depl_namespace}}"
+      when: depl_chk is succeeded
+      notify:
+      - CdSuccessUpdate
+    rescue:
+    - slack:
+        token: "{{slackToken}}"
+        msg: "CD failed: k8s failed to update deployment."
+        color: danger
+  - name: "Docker: Remove tagged image"
+    ansible.builtin.command: "docker rmi -f {{image}}:{{imageTag}}"
+    connection: local
+  handlers:
+  - name: CdSuccessCreate
+    slack:
+      token: "{{slackToken}}"
+      msg: "CD success: Created deployment {{depl}}"
+      color: good
+  - name: CdSuccessUpdate
+    slack:
+      token: "{{slackToken}}"
+      msg: "CD success: Updated deployment {{depl}}"
+      color: good

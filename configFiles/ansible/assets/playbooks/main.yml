@@ -1,0 +1,5 @@
+- name: "Docker"
+  ansible.builtin.import_playbook: "docker.yml"
+
+- name: "Kubernetes"
+  ansible.builtin.import_playbook: "k8s.yml"

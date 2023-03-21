@@ -1,16 +1,16 @@
-resource "azurerm_network_security_group" "nsg_jenkins" {
-  name                = "nsg_jenkins"
+resource "azurerm_network_security_group" "nsg_sonarqube" {
+  name                = "nsg_sonarqube"
   resource_group_name = azurerm_resource_group.pipeline.name
   location            = azurerm_resource_group.pipeline.location
 
   security_rule {
-    name                       = "Allow-Jenkins"
+    name                       = "Allow-HTTP"
     priority                   = 100
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "8080"
+    destination_port_range     = "9000"
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
@@ -28,42 +28,48 @@ resource "azurerm_network_security_group" "nsg_jenkins" {
   }
 }
 
-resource "azurerm_network_interface_security_group_association" "anisga_jenkins" {
-  network_interface_id      = azurerm_network_interface.nic_jenkins.id
-  network_security_group_id = azurerm_network_security_group.nsg_jenkins.id
+
+resource "azurerm_network_interface_security_group_association" "anisga_sonarqube" {
+  network_interface_id      = azurerm_network_interface.nic_sonarqube.id
+  network_security_group_id = azurerm_network_security_group.nsg_sonarqube.id
 }
 
-resource "azurerm_public_ip" "ip_jenkins" {
-  name                = "ip_jenkins"
+
+resource "azurerm_public_ip" "ip_sonarqube" {
+  name                = "ip_sonarqube"
   resource_group_name = azurerm_resource_group.pipeline.name
   location            = azurerm_resource_group.pipeline.location
   allocation_method   = "Dynamic"
 }
 
-resource "azurerm_network_interface" "nic_jenkins" {
-  name                = "nic_jenkins"
+
+resource "azurerm_network_interface" "nic_sonarqube" {
+  name                = "nic_sonarqube"
   resource_group_name = azurerm_resource_group.pipeline.name
   location            = azurerm_resource_group.pipeline.location
 
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_subnet.s0.id
+    subnet_id                     = azurerm_subnet.s1.id
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.ip_jenkins.id
+    public_ip_address_id          = azurerm_public_ip.ip_sonarqube.id
   }
 }
 
-resource "azurerm_linux_virtual_machine" "vm_jenkins" {
-  name                  = "vm-jenkins"
+resource "azurerm_linux_virtual_machine" "vm_sonarqube" {
+  name                  = "vm-sonarqube"
   resource_group_name   = azurerm_resource_group.pipeline.name
   location              = azurerm_resource_group.pipeline.location
   size                  = "Standard_B2s"
   admin_username        = var.user
-  network_interface_ids = [azurerm_network_interface.nic_jenkins.id]
+  network_interface_ids = [azurerm_network_interface.nic_sonarqube.id]
+  depends_on = [
+    azurerm_private_endpoint.db_pe
+  ]
 
   admin_ssh_key {
     username   = var.user
-    public_key = tls_private_key.key_jenkins.public_key_openssh
+    public_key = tls_private_key.key_sonarqube.public_key_openssh
   }
 
   os_disk {
@@ -82,47 +88,53 @@ resource "azurerm_linux_virtual_machine" "vm_jenkins" {
   connection {
     type        = "ssh"
     user        = var.user
-    private_key = tls_private_key.key_jenkins.private_key_openssh
+    private_key = tls_private_key.key_sonarqube.private_key_openssh
     host        = self.public_ip_address
   }
 
   provisioner "file" {
-    content     = tls_private_key.key_jenkins.public_key_openssh
+    content     = tls_private_key.key_sonarqube.public_key_openssh
     destination = "/home/${var.user}/.ssh/id_rsa.pub"
   }
 
   provisioner "file" {
-    content     = tls_private_key.key_jenkins.private_key_openssh
+    content     = tls_private_key.key_sonarqube.private_key_openssh
     destination = "/home/${var.user}/.ssh/id_rsa"
   }
 
   provisioner "file" {
-    content     = tls_private_key.key_ansible.private_key_openssh
-    destination = "/home/${var.user}/.ssh/ansible.key"
+    source      = "../configFiles/sonarqube/assets/"
+    destination = "/home/${var.user}"
+  }
+
+  provisioner "remote-exec" {
+    script = "../configFiles/sonarqube/config/setup.sh"
   }
 
   provisioner "remote-exec" {
     inline = [
       "chmod 0600 /home/${var.user}/.ssh/id_rsa",
-      "chmod 0600 /home/${var.user}/.ssh/ansible.key",
-      "ssh-keygen -p -f /home/${var.user}/.ssh/ansible.key -m pem -N ''",
-    ]
-  }
-
-  provisioner "remote-exec" {
-    script = "../configFiles/jenkins/config/setup.sh"
+      <<EOT
+echo '
+DB_IP=${data.azurerm_private_endpoint_connection.db_pec.private_service_connection.0.private_ip_address}
+DB_NAME=${azurerm_postgresql_server.db1.name}
+DB_USER=${azurerm_postgresql_server.db1.administrator_login}
+DB_PASS=${azurerm_postgresql_server.db1.administrator_login_password}
+' | sudo tee -a /etc/environment > /dev/null
+EOT
+    , "export $(cat /etc/environment) && docker-compose -f /home/${var.user}/docker-compose.yml up -d"]
   }
 }
 
 
-resource "tls_private_key" "key_jenkins" {
+resource "tls_private_key" "key_sonarqube" {
   algorithm = "RSA"
   rsa_bits  = "4096"
 }
 
 
-resource "local_file" "local_key_jenkins" {
-  filename        = "../sshKeys/jenkins.key"
-  content         = tls_private_key.key_jenkins.private_key_openssh
+resource "local_file" "local_key_sonarqube" {
+  filename        = "../sshKeys/sonarqube.key"
+  content         = tls_private_key.key_sonarqube.private_key_openssh
   file_permission = "0600"
 }

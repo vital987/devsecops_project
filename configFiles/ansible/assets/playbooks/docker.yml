@@ -1,0 +1,63 @@
+- hosts: localhost
+  connection: local
+  tasks:
+  - block:
+    - name: "Docker: Login"
+      docker_login:
+        username: "{{dockerUsr}}"
+        password: "{{dockerPass}}"
+    rescue:
+    - slack:
+        token: "{{slackToken}}"
+        msg: "CD failed: docker login fail."
+        color: danger
+  - block:
+    - name: "Docker: Build & push tagged image"
+      docker_image:
+        build:
+          path: ~/imageBuild
+          pull: yes
+        name: "{{image}}:{{imageTag}}"
+        repository: "{{image}}:{{imageTag}}"
+        push: yes
+        source: build
+    rescue:
+    - slack:
+        token: "{{slackToken}}"
+        msg: "CD failed: docker build & push tagged image failed."
+        color: danger
+  - block:
+    - name: "Docker: Tag & push latest image"
+      docker_image:
+        name: "{{image}}:{{imageTag}}"
+        repository: "{{image}}:latest"
+        force_tag: yes
+        push: yes
+        source: local
+    rescue:
+    - slack:
+        token: "{{slackToken}}"
+        msg: "CD failed: docker tag & push latest image failed."
+        color: danger
+  - name: "Docker: Logout"
+    docker_login:
+      state: absent
+  - block:
+    - name: "Trivy: Scan image & upload reports to blob storage"
+      shell:
+        cmd: |
+          export REPORT_NAME=trivy_report_$(TZ=Asia/Kolkata date '+%d%m%yT%H%M%S').txt
+          trivy image vital987/testapp:1 > $HOME/reports/$REPORT_NAME
+          az login --identity
+          az storage blob upload \
+          --account-name sa1nlptjrbeqcblkwjgqsme \
+          --container-name trivy-reports \
+          --name $REPORT_NAME \
+          --file $HOME/reports/$REPORT_NAME \
+          --type append \
+          --auth-mode login
+    rescue:
+    - slack:
+        token: "{{slackToken}}"
+        msg: "Failed to generate or upload Trivy reports."
+        color: warning
